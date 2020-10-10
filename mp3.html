@@ -1,0 +1,5290 @@
+
+<!doctype html>
+<html >
+<head>
+    <meta  charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0,maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="MBA资源,经济,管理,商业,培训,资讯,企业管理,管理咨询,广告营销,广告监测,市场数据,新闻监测,文档搜索,MBA百科,管理百科,经管百科" />
+    <meta name="description" content="MBA智库,专注于经济管理领域" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="copyright" href="//www.mbalib.com" />
+    <link rel="stylesheet" href="https://img.mbalib.com/ketang/main_v829.css?v=20200708">
+    <link rel="stylesheet" href="https://img.mbalib.com/ketang/common_v612.css?v=200306">
+    <title>八堂薪酬体系课教会你，如何做好薪酬管理 - MBA智库 · 课堂</title>
+
+    <script type="text/javascript" src="https://img.mbalib.com/ketang/js.js"></script>
+    <script type="text/javascript" src="https://img.mbalib.com/common/jquery/jquery.js"></script>
+    <script type="text/javascript" src="https://img.mbalib.com/common/jquery/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="https://img.mbalib.com/common/common.js?v=200306"></script>
+    <script type="text/javascript" src="https://img.mbalib.com/common/mencrypt.js"></script>
+    <script type="text/javascript" src="https://img.mbalib.com/common/app.js"></script>
+    <script type="text/javascript" src="https://img.mbalib.com/common/notice_v0927.js?v=200306"></script>
+
+</head>
+
+
+<script>
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1c51a09d54b2f6aeb599844163d86610";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+
+<script>
+var static_server = "https://img.mbalib.com";
+var server = "https://ke.mbalib.com";
+
+$.fn.longPress = function(fn) {
+    var timeout = undefined;
+    var $this = this;
+    for(var i = 0;i<$this.length;i++){
+        $this[i].addEventListener('touchstart', function(event) {
+            timeout = setTimeout(fn, 800);
+            }, false);
+        $this[i].addEventListener('touchend', function(event) {
+            clearTimeout(timeout);
+            }, false);
+    }
+};
+
+(function(){
+
+	var wfgetuserUrl = "/services/user";
+
+	$.post(wfgetuserUrl,{},function(result){
+		if($.isEmptyObject(result)) return;
+		if(result.error && result.error == 10003)
+		{
+			jumpLogin();
+			return;
+		}
+	},'json');
+})()
+
+</script>
+
+<script>
+
+        //被授权用户（在crm批量开通会员的用户）登录App或者课堂微信端后，弹出的提示
+        function showVipByCrm(){
+            var token = wfGetCookie('wikidbAccessToken');
+            if(!token) return;
+
+//            var  show = wfGetCookie('joinVipbyCrm');
+//            if(show) return;
+
+            $.post('/api/HasCrmVip',{access_token:token},function(result){
+                result = JSON.parse(result);
+                if(result.has_crm_vip && result.has_crm_vip==1){
+                    var html = '<div class="pop-vip" id="pop-vip"><img src="'+static_server+'/ketang/images/vip/vip-join.png" onclick="closeCrmPop()"></div>';
+                    html+='<div id="pop-vipBg" class="bg" onclick="closeCrmPop()"></div>';
+                    $("body").append(html);
+//                    setCookie('joinVipbyCrm','1',60,'.mbalib.com');
+                }
+            });
+        }
+        function closeCrmPop(){
+            $('#pop-vip').remove();$('#pop-vipBg').remove();
+            location.href = server;
+//            if(location.href.indexOf('/user')>0){
+//                location.reload();
+//            }
+        }
+
+        $(function(){
+            showVipByCrm();
+        });
+
+</script>
+
+<script src="https://img.mbalib.com/ketang/common_v22.js?v=329"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script>
+var wx_timestamp = '';
+var wx_signature = '';
+var wx_nonceStr = '';
+var wx_appId = '';
+var wx_localId;
+
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: wx_appId, // 必填，公众号的唯一标识
+    timestamp:wx_timestamp , // 必填，生成签名的时间戳
+    nonceStr: wx_nonceStr, // 必填，生成签名的随机串
+    signature:wx_signature,// 必填，签名，见附录1
+    jsApiList: [
+	'onMenuShareTimeline',
+	'onMenuShareAppMessage',
+	'onMenuShareQQ',
+	'onMenuShareWeibo',
+	'onMenuShareQZone',
+	'chooseImage',
+	'previewImage',
+	'uploadImage',
+	'downloadImage',
+	'hideMenuItems'
+] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+
+</script>
+</head>
+
+<body>
+<div class="topbar">
+      <ul class="site-nav">
+        <li><a href="https://www.mbalib.com">首页</a></li>
+        <li><a href="https://doc.mbalib.com" class="sel">文档</a></li>
+        <li><a href="https://wiki.mbalib.com">百科</a></li>
+        <li class="selected"><a href="https://ke.mbalib.com">课堂</a></li>
+        <li><a href="https://mba.mbalib.com">商学院</a></li>
+        <li><a href="https://news.mbalib.com">资讯</a></li>
+        <li><a href="https://training.mbalib.com">培训</a></li>
+        <li><a href="https://bang.mbalib.com">帮帮</a></li>
+      </ul>
+</div>
+
+<script>
+if(!wfIsPC()){
+    $(".topbar").hide();
+}
+</script>
+<div class="headnav-def headnav-black fz-18 hid" id="distribution_banner">选择右上角分享即可分销，点此则进入专属页</div>
+
+<style>
+
+html,body {
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+</style>
+<div class="bg hidden" id="box-app-bg"></div>
+<div class="box-app-tip" id="down-app-pop">
+	<h6 class="title">App功能推荐</h6>
+	<a href="javascript:void(0)" class="closeBtn"  onclick="closeAppTip()"></a>
+	<p class="text">定时播放、变速播放、离线下载等功能仅支持App</p>
+	<a href="javascript:void(0)" class="lineBtn primary" onclick="downAppLink()" >前往「MBA智库App」立即体验</a>
+</div>
+
+<div class="content content4">
+    <div class="qplayer-play-box">
+       <div id="player_container" style="height:100%"></div>
+       <div id="player_container2" class="hid" style="height:100%;font-size:0"></div>
+
+		<div class="player-controls">
+			<div class="right-btns">
+				<button class="player-ico" onclick="openAppTip()"><i class="down-material"></i></button>
+				<button class="player-btn"  onclick="openAppTip()">倍速<i class="fold-arrow"></i></button>
+
+				<button class="player-btn"  onclick="openAppTip()">定时<i class="fold-arrow"></i></button>
+			</div>
+		</div>
+
+       <div class="tabnav3 fz-24 landscape-none">
+         <a href="javascript:void(0)" data-type="info" class="a-tab a-tab1 fl"><span>介绍<i class="a-tabline"></i></span></a>
+         <a href="javascript:void(0)" data-type="course" class="a-tab a-tab1 fl a-tabsel"><span>课程<i class="a-tabline"></i></span></a>
+         <a href="javascript:void(0)" data-type="comment" class="a-tab a-tab1 fl"><span>评论<i class="a-tabline"></i></span></a>
+       </div>
+    </div>
+
+
+<div class="landscape-none">
+    <!--课程-->
+    <div class="ke-main course_main main_div">
+      <div style="margin:0 .5rem;">
+
+       <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1301" >1.薪酬的设计原则和诊断分析</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-08-23 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-course_id=8573924 data-pc_pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-url="https://media.mbalib.com/ketang/3/38/38849cc53d3e38e7a3b712565b0ba296.mp3?auth_key=1604818320-0-0-66a9884c1b75e0dcb0a6b7a48a04408e" data-time="206"
+                            data-id="1301" data-islisten="0"
+                            data-title="01.薪酬体系课大纲介绍"
+                            data-ware='[{"sort":1,"time":"2","pic":"https://ke.mbalib.com/uploads/ware/3/3a/3a6657d42b9ce38d78b67f204894e02e.jpg"}]'
+                            data-sort="0" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.薪酬体系课大纲介绍</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>03:26</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">03:26</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-course_id=8573924 data-pc_pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-url="https://media.mbalib.com/ketang/5/5b/5b79f260eb654619c919638a0552e03b.mp3?auth_key=1604818320-0-0-f881aa06d4f4685e0f02bc414dd4ac39" data-time="563"
+                            data-id="1302" data-islisten="0"
+                            data-title="02.提出问题"
+                            data-ware='[{"sort":1,"time":"2","pic":"https://ke.mbalib.com/uploads/ware/f/f0/f0a26407b2e80903d1dd671cb0542fda.jpg"},{"sort":2,"time":"146","pic":"https://ke.mbalib.com/uploads/ware/7/7f/7f44ac34a295c343635ae1ca92ee931e.jpg"}]'
+                            data-sort="1" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.提出问题</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>09:23</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">09:23</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-course_id=8573924 data-pc_pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-url="https://media.mbalib.com/ketang/4/4d/4da19afe38d580ac7c9cbf10450cf94d.mp3?auth_key=1604818320-0-0-70c7709aaffb38d8d9a47d39d6013a17" data-time="632"
+                            data-id="1303" data-islisten="0"
+                            data-title="03.薪酬诊断步骤"
+                            data-ware='[{"sort":1,"time":"2","pic":"https://ke.mbalib.com/uploads/ware/6/6c/6c360ddee388f7dcf35f079fd6a485ee.jpg"},{"sort":2,"time":"75","pic":"https://ke.mbalib.com/uploads/ware/0/04/04e3a2cc70226f2697d5abeb97d90446.jpg"},{"sort":3,"time":"315","pic":"https://ke.mbalib.com/uploads/ware/e/ef/ef250cea49f964b669ed0ffd0c9c8f0c.jpg"},{"sort":4,"time":"328","pic":"https://ke.mbalib.com/uploads/ware/b/b7/b7b0c79ff70633e85bb56b749004b062.jpg"},{"sort":5,"time":"404","pic":"https://ke.mbalib.com/uploads/ware/c/c9/c913ad30ec52c6188831b85e90bf6767.jpg"},{"sort":6,"time":"545","pic":"https://ke.mbalib.com/uploads/ware/d/d4/d4aeaacd4254e987cfb649cea932a0ee.jpg"}]'
+                            data-sort="2" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">03.薪酬诊断步骤</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>10:32</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">10:32</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-course_id=8573924 data-pc_pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-url="https://media.mbalib.com/ketang/4/47/47acdb83f0de24822f2b71bf39d71f18.mp3?auth_key=1604818320-0-0-438f47b86c75933dcc206a87860bcc59" data-time="560"
+                            data-id="1304" data-islisten="0"
+                            data-title="04.诊断报告体现的问题"
+                            data-ware='[{"sort":1,"time":"3","pic":"https://ke.mbalib.com/uploads/ware/6/6a/6ad0b12e5150047d059ed4972e8d2f91.jpg"},{"sort":2,"time":"42","pic":"https://ke.mbalib.com/uploads/ware/c/c2/c223c127ac83a09b1e49ee7678479c7b.jpg"},{"sort":3,"time":"131","pic":"https://ke.mbalib.com/uploads/ware/c/c7/c76c1d4f8d16f225bcee5cf5f788df22.jpg"},{"sort":4,"time":"425","pic":"https://ke.mbalib.com/uploads/ware/a/ab/ab232450d58d6bba99ce75cd376f04ef.jpg"}]'
+                            data-sort="3" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">04.诊断报告体现的问题</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>09:20</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">09:20</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-course_id=8573924 data-pc_pic="https://ke.mbalib.com/uploads/course/2/29/2986647bb2a36d861a3c1d44aaeb3ed3.png"
+                            data-url="https://media.mbalib.com/ketang/6/6c/6c814089cab0d15ea622bbcf553612eb.mp3?auth_key=1604818320-0-0-f7b3edee77c1787104295c022ab3d90d" data-time="454"
+                            data-id="1305" data-islisten="0"
+                            data-title="05.岗位分析"
+                            data-ware='[{"sort":1,"time":"8","pic":"https://ke.mbalib.com/uploads/ware/f/f6/f6b558244e41eff576b15c0c48b0b813.jpg"},{"sort":2,"time":"46","pic":"https://ke.mbalib.com/uploads/ware/9/99/998c8bff3f65106ab955628fbfda1934.jpg"},{"sort":3,"time":"100","pic":"https://ke.mbalib.com/uploads/ware/8/8c/8ca06f234341f8fa2377b0eb50c3c38a.jpg"},{"sort":4,"time":"293","pic":"https://ke.mbalib.com/uploads/ware/e/e1/e13d92e6374139fdb96c30a799cc46b4.jpg"}]'
+                            data-sort="4" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">05.岗位分析</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>07:34</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">07:34</span>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+    <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1314" >2.制定合理的薪酬方法</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-08-23 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-course_id=8573895 data-pc_pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-url="https://media.mbalib.com/ketang/3/39/395aa251cc1efdd7420b9da61591a876.mp3?auth_key=1604818320-0-0-4cd28b01b108bb3d52cc74db4cae99a0" data-time="641"
+                            data-id="1314" data-islisten="0"
+                            data-title="01.制定策略前的思考"
+                            data-ware='[{"sort":1,"time":"2","pic":"https://ke.mbalib.com/uploads/ware/0/09/0979f6de92d9a5a0dced9400c404c236.jpg"},{"sort":2,"time":"18","pic":"https://ke.mbalib.com/uploads/ware/8/86/8681b834a4bf98bc9538eae22498a009.jpg"},{"sort":3,"time":"221","pic":"https://ke.mbalib.com/uploads/ware/b/be/bedc653243799e54d15035076be232cd.jpg"}]'
+                            data-sort="5" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.制定策略前的思考</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>10:41</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">10:41</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-course_id=8573895 data-pc_pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-url="https://media.mbalib.com/ketang/0/03/033b30713823ca8f2e9d104705a6163e.mp3?auth_key=1604818320-0-0-9f06016283f04af2362e760e685876bc" data-time="545"
+                            data-id="1315" data-islisten="0"
+                            data-title="02.薪酬发展策略的制定"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/7/71/712861f64ababb29763c35aba63b5fa5.jpg"},{"sort":2,"time":"370","pic":"https://ke.mbalib.com/uploads/ware/9/98/988f0561dac6143b6b3487b08d0dbdaa.jpg"}]'
+                            data-sort="6" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.薪酬发展策略的制定</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>09:05</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">09:05</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-course_id=8573895 data-pc_pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-url="https://media.mbalib.com/ketang/8/81/81cbdb560503da1c7c1af6f28147f9cb.mp3?auth_key=1604818320-0-0-6e348da7eb7d4640266dcfeacf21b2af" data-time="447"
+                            data-id="1316" data-islisten="0"
+                            data-title="03.薪酬策略的发展阶段"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/a/a9/a9d1ef14520b84ae904212c69cffc83c.jpg"}]'
+                            data-sort="7" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">03.薪酬策略的发展阶段</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>07:27</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">07:27</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-course_id=8573895 data-pc_pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-url="https://media.mbalib.com/ketang/8/89/89778e1aec372953591a1e339b122ad1.mp3?auth_key=1604818320-0-0-734e1d0045c484ba4fc2d1f861631f8f" data-time="405"
+                            data-id="1317" data-islisten="0"
+                            data-title="04.薪酬策略的行业地位"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/d/d0/d0d7fff59b792822b5a062718c939cf4.jpg"}]'
+                            data-sort="8" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">04.薪酬策略的行业地位</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>06:45</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">06:45</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class="less-list3  less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-course_id=8573895 data-pc_pic="https://ke.mbalib.com/uploads/course/b/b9/b9cdf6f07ff51b18c8a5e4aef9392639.png"
+                            data-url="https://media.mbalib.com/ketang/9/94/94a515b23f7c97d034a47b67096be350.mp3?auth_key=1604818320-0-0-decd513ecd818408d88a120ad906e9a0" data-time="1071"
+                            data-id="1318" data-islisten="1"
+                            data-title="05.企业如何提高人均收入"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/9/9c/9cfc5d6fd725e009f597f1432febaba6.jpg"}]'
+                            data-sort="9" data-type="audio"
+			    data-learntime="153"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">05.企业如何提高人均收入</span></p>
+
+						<div class="front-note fz-color-gray3">
+				<span>17:51</span>
+				<span class="fz-14 m_radio">已学14%</span>
+			</div>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+    <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1354" >3.如何选择合适自己企业岗位评估工具</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-08-30 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class="less-list3  less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-course_id=8572966 data-pc_pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-url="https://media.mbalib.com/ketang/f/f2/f267815b5c4a28e0a5a78991a5d5259a.mp3?auth_key=1604818320-0-0-4b5ec7f870a6d03a5d6972aff14c7553" data-time="394"
+                            data-id="1354" data-islisten="1"
+                            data-title="01.岗位价值评估的公平性"
+                            data-ware='[{"sort":1,"time":"0","pic":"https://ke.mbalib.com/uploads/ware/c/ce/cea268f01f9a96220f5b5cde6e453f15.jpg"},{"sort":2,"time":"27","pic":"https://ke.mbalib.com/uploads/ware/f/f0/f0dad7319869eebdabe3b14ba768ca0a.jpg"},{"sort":3,"time":"50","pic":"https://ke.mbalib.com/uploads/ware/e/e0/e07d866e7a7c041c9736ee181a9bcea9.jpg"},{"sort":4,"time":"72","pic":"https://ke.mbalib.com/uploads/ware/9/94/94ffe05f0b746b13c5e52a6a9687aa35.jpg"}]'
+                            data-sort="10" data-type="audio"
+			    data-learntime="61"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.岗位价值评估的公平性</span></p>
+
+						<div class="front-note fz-color-gray3">
+				<span>06:34</span>
+				<span class="fz-14 m_radio">已学15%</span>
+			</div>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-course_id=8572966 data-pc_pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-url="https://media.mbalib.com/ketang/8/81/811a3d510590ee201128a25d3ae379f5.mp3?auth_key=1604818320-0-0-632141220e2724755281027172ffce14" data-time="332"
+                            data-id="1355" data-islisten="0"
+                            data-title="02.岗位价值评估的类型"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/7/7e/7e92c89421ff3e3004d5e6e94d804cfd.jpg"},{"sort":2,"time":"80","pic":"https://ke.mbalib.com/uploads/ware/f/fc/fc68f9e6827e0345ca49b6d99fbf3a3e.jpg"},{"sort":3,"time":"205","pic":"https://ke.mbalib.com/uploads/ware/b/bb/bb9c7cf8106f27c0e56974bcbebe8fc7.jpg"},{"sort":4,"time":"225","pic":"https://ke.mbalib.com/uploads/ware/e/e8/e8dbdebfeffba4654cc59d7c523de3e6.jpg"},{"sort":5,"time":"257","pic":"https://ke.mbalib.com/uploads/ware/4/49/4978f03eb21c1008fb08d28fed989bae.jpg"}]'
+                            data-sort="11" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.岗位价值评估的类型</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>05:32</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">05:32</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-course_id=8572966 data-pc_pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-url="https://media.mbalib.com/ketang/9/9d/9de96c893a0341aebc1e5f0518981cbe.mp3?auth_key=1604818320-0-0-f17640995b19f50d28cce8bb092d2571" data-time="330"
+                            data-id="1356" data-islisten="0"
+                            data-title="03.美世国际评估体系的评估要素"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/e/ef/ef6949e5065f05e9de05665ffde54aab.jpg"}]'
+                            data-sort="12" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">03.美世国际评估体系的评估要素</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>05:30</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">05:30</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-course_id=8572966 data-pc_pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-url="https://media.mbalib.com/ketang/2/29/29f2108ac7fc0d4dae4035c5733ba783.mp3?auth_key=1604818320-0-0-6d17e18cfc363c7a6ab1bf1dd786583c" data-time="1072"
+                            data-id="1357" data-islisten="0"
+                            data-title="04.岗位价值评估的细分以及结果"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/0/08/08cbd81d61aa3f28bf93c8c3f225a2bf.jpg"},{"sort":2,"time":"80","pic":"https://ke.mbalib.com/uploads/ware/e/e0/e05f4037e6834d0d0f14f8d7d6929b11.jpg"},{"sort":3,"time":"113","pic":"https://ke.mbalib.com/uploads/ware/d/d8/d84e6bfe3e2e41966482d385ea12a4bb.jpg"},{"sort":4,"time":"152","pic":"https://ke.mbalib.com/uploads/ware/9/9f/9f7e10f858da963c40a4946c5dd2cc90.jpg"},{"sort":5,"time":"183","pic":"https://ke.mbalib.com/uploads/ware/1/12/12f4d140d4242a988d36cf5ee896ea96.jpg"},{"sort":6,"time":"219","pic":"https://ke.mbalib.com/uploads/ware/6/69/69077294f0cc115331831e639786a876.jpg"},{"sort":7,"time":"252","pic":"https://ke.mbalib.com/uploads/ware/3/31/31e57d9efdb690c514c0325a11d4da7a.jpg"},{"sort":8,"time":"313","pic":"https://ke.mbalib.com/uploads/ware/1/15/15d5b9aba0aa046b40e9860c9bea9c1a.jpg"},{"sort":9,"time":"390","pic":"https://ke.mbalib.com/uploads/ware/2/2e/2ed2cb3bf80f93fd8a4bd8cb2e467fda.jpg"},{"sort":10,"time":"440","pic":"https://ke.mbalib.com/uploads/ware/3/33/333d105329355019bdf061c3034846fc.jpg"},{"sort":11,"time":"462","pic":"https://ke.mbalib.com/uploads/ware/5/51/511203ac036d49039dbbc533ba6901bc.jpg"},{"sort":12,"time":"512","pic":"https://ke.mbalib.com/uploads/ware/3/3a/3a1d954749de3b7aa87eeb4215da71c2.jpg"},{"sort":13,"time":"692","pic":"https://ke.mbalib.com/uploads/ware/7/78/782c4ffcba71594a758bd1eb3de61c65.jpg"},{"sort":14,"time":"762","pic":"https://ke.mbalib.com/uploads/ware/9/9a/9a424d3d3df16b8431a78e7ac1ad12f5.jpg"},{"sort":15,"time":"810","pic":"https://ke.mbalib.com/uploads/ware/f/f7/f79e7c156968aab4717f7e0e241a2dd3.jpg"},{"sort":16,"time":"960","pic":"https://ke.mbalib.com/uploads/ware/1/1b/1b115374e061bf833c3da65d8d2b36ac.jpg"}]'
+                            data-sort="13" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">04.岗位价值评估的细分以及结果</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>17:52</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">17:52</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-course_id=8572966 data-pc_pic="https://ke.mbalib.com/uploads/course/3/38/38db1af8ce687df5412cb7d9218562b6.png"
+                            data-url="https://media.mbalib.com/ketang/8/81/81be71cac89b33d21d4e8bee44ff5b16.mp3?auth_key=1604818320-0-0-b3cef98d163ceb6a0e6b89ea1059eb0b" data-time="415"
+                            data-id="1358" data-islisten="0"
+                            data-title="05.数值的评估和反馈调整"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/0/0d/0d77e2f933aded4eac7bf61dbe1435cc.jpg"},{"sort":2,"time":"70","pic":"https://ke.mbalib.com/uploads/ware/b/b6/b64d5ee30b0659706e7dd48976727c63.jpg"},{"sort":3,"time":"281","pic":"https://ke.mbalib.com/uploads/ware/4/40/402d6c63822c636a1fae456a1bde6db1.jpg"}]'
+                            data-sort="14" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">05.数值的评估和反馈调整</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>06:55</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">06:55</span>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+    <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1359" >4.市场薪酬调查与薪酬分级定薪</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-08-30 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-course_id=8572953 data-pc_pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-url="https://media.mbalib.com/ketang/5/54/542847d61327c51c3a8da508712e5fb9.mp3?auth_key=1604818320-0-0-4e64bc15a3b3780c3549a5a3445a426c" data-time="487"
+                            data-id="1359" data-islisten="0"
+                            data-title="01.调查的企业类型和流程"
+                            data-ware='[{"sort":1,"time":"2","pic":"https://ke.mbalib.com/uploads/ware/1/1c/1c21e359e90150664a78872caffc159e.jpg"},{"sort":2,"time":"40","pic":"https://ke.mbalib.com/uploads/ware/0/0b/0bd5a4eebb287fde1f56848234b45649.jpg"},{"sort":3,"time":"245","pic":"https://ke.mbalib.com/uploads/ware/f/f7/f7b7c3d19ee8cc2bf9b9aaf8a912f668.jpg"}]'
+                            data-sort="15" data-type="audio"
+			    data-learntime="0"
+                            data-draft="">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.调查的企业类型和流程</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>08:07</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">08:07</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-course_id=8572953 data-pc_pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-url="https://media.mbalib.com/ketang/8/8b/8babf0590be666a1f527c5c573aeeeb3.mp3?auth_key=1604818320-0-0-9c420e2b0804f873b4ded9a0b0a23dba" data-time="664"
+                            data-id="1360" data-islisten="0"
+                            data-title="02.薪酬调查的途径"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/0/02/02d88b052590fa2fdf2c35ebd837b387.jpg"}]'
+                            data-sort="16" data-type="audio"
+			    data-learntime="0"
+                            data-draft="">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.薪酬调查的途径</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>11:04</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">11:04</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-course_id=8572953 data-pc_pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-url="https://media.mbalib.com/ketang/e/ea/eaaad5c283ec2bea222ca1dc8e54077f.mp3?auth_key=1604818320-0-0-734558232aadf4c1b1cd2799437691b8" data-time="951"
+                            data-id="1361" data-islisten="0"
+                            data-title="03.分位值的计算"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/b/b0/b0b5f2986f99072ca4d6b35b9fe0f338.jpg"},{"sort":2,"time":"281","pic":"https://ke.mbalib.com/uploads/ware/f/f3/f3ac90dd56b203624136e092c86069b3.jpg"},{"sort":3,"time":"330","pic":"https://ke.mbalib.com/uploads/ware/c/c8/c859d6a19b611acdc66287b47b0b3306.jpg"},{"sort":4,"time":"367","pic":"https://ke.mbalib.com/uploads/ware/8/81/816556dede4254a8364574db382c8cb8.jpg"},{"sort":5,"time":"680","pic":"https://ke.mbalib.com/uploads/ware/d/d9/d9f7389f5a2c5b63681c97913040d81d.jpg"}]'
+                            data-sort="17" data-type="audio"
+			    data-learntime="0"
+                            data-draft="">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">03.分位值的计算</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>15:51</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">15:51</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-course_id=8572953 data-pc_pic="https://ke.mbalib.com/uploads/course/3/33/338935485b260c702075f74227723f42.png"
+                            data-url="https://media.mbalib.com/ketang/0/0b/0bc976710b8e4921d5b33d1ba5013fd8.mp3?auth_key=1604818320-0-0-e6df9f6ac7cdd83d315d418131a05295" data-time="506"
+                            data-id="1362" data-islisten="0"
+                            data-title="04.薪酬评估结果以及职等设计原则"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/9/93/93057d018d2c63c353316a4a9febe4d0.jpg"},{"sort":2,"time":"90","pic":"https://ke.mbalib.com/uploads/ware/7/7a/7a9590035250c0626ed6adbeec564622.jpg"},{"sort":3,"time":"330","pic":"https://ke.mbalib.com/uploads/ware/4/43/43999b7135c0b941da8eb986fb8a07bb.jpg"},{"sort":4,"time":"358","pic":"https://ke.mbalib.com/uploads/ware/0/0b/0bf3560ed74f1ad74fd163d569007a88.jpg"}]'
+                            data-sort="18" data-type="audio"
+			    data-learntime="0"
+                            data-draft="">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">04.薪酬评估结果以及职等设计原则</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>08:26</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">08:26</span>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+    <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1390" >5.确定各薪酬分级和定薪</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-09-06 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-course_id=8573048 data-pc_pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-url="https://media.mbalib.com/ketang/a/ad/ad18f323b095493ca002c57e8e8509d9.mp3?auth_key=1604818320-0-0-fb257e886d4eca803921239ca1b59783" data-time="705"
+                            data-id="1390" data-islisten="0"
+                            data-title="01.职等划分的方法和设计原则"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/a/ad/ad7a1b7f8f8b6348c7128037477158b0.jpg"},{"sort":2,"time":"36","pic":"https://ke.mbalib.com/uploads/ware/6/6d/6d587fb0d991f692ae621145eb60c574.jpg"},{"sort":3,"time":"62","pic":"https://ke.mbalib.com/uploads/ware/5/58/58659a0839a7168c25b7340d21620242.jpg"},{"sort":4,"time":"156","pic":"https://ke.mbalib.com/uploads/ware/9/9a/9a363a1df751519c0a96e9f44aa8c0d2.jpg"},{"sort":5,"time":"506","pic":"https://ke.mbalib.com/uploads/ware/4/44/44a95979d4f1615eb83e615a97063936.jpg"},{"sort":6,"time":"526","pic":"https://ke.mbalib.com/uploads/ware/8/81/8101d7c967025078c0e7207e8129fdc0.jpg"}]'
+                            data-sort="19" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.职等划分的方法和设计原则</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>11:45</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">11:45</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-course_id=8573048 data-pc_pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-url="https://media.mbalib.com/ketang/5/50/5084cfa5b771559d251366fb383d45ab.mp3?auth_key=1604818320-0-0-bbb1ed30688e2d791d889c2c8e1e1543" data-time="656"
+                            data-id="1391" data-islisten="0"
+                            data-title="02.中位值的计算以及薪酬曲线的设计"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/1/1d/1da67df99c66d5963ec100ed8eb87e41.jpg"},{"sort":2,"time":"44","pic":"https://ke.mbalib.com/uploads/ware/c/c9/c9a992fba0ea2067b14cfc0f1f4311aa.jpg"},{"sort":3,"time":"605","pic":"https://ke.mbalib.com/uploads/ware/a/a2/a2be3e9314eee5072aa9687ef60f829c.jpg"}]'
+                            data-sort="20" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.中位值的计算以及薪酬曲线的设计</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>10:56</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">10:56</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-course_id=8573048 data-pc_pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-url="https://media.mbalib.com/ketang/a/ad/ad50af6838a15b60d9422b82068bb16a.mp3?auth_key=1604818320-0-0-f30522fb36e5842ba2d43bc6e81ab831" data-time="629"
+                            data-id="1392" data-islisten="0"
+                            data-title="03.薪级划分方法"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/0/09/09461cf2bcf11572f417ac6cbc8130b6.jpg"},{"sort":2,"time":"18","pic":"https://ke.mbalib.com/uploads/ware/a/a8/a8a2d9b7bae79c963f05cf5190cae06c.jpg"},{"sort":3,"time":"98","pic":"https://ke.mbalib.com/uploads/ware/b/b8/b8baef3034ed00b1f93a93abf90f582a.jpg"},{"sort":4,"time":"292","pic":"https://ke.mbalib.com/uploads/ware/e/ec/ec91f3ddfe688f3496b4149be0c6254c.jpg"},{"sort":5,"time":"396","pic":"https://ke.mbalib.com/uploads/ware/e/e6/e6aea6f6c152f4c92c6f69799c5e9609.jpg"},{"sort":6,"time":"432","pic":"https://ke.mbalib.com/uploads/ware/1/11/113ef4e74f3347d4e42e360ea5df288e.jpg"},{"sort":7,"time":"496","pic":"https://ke.mbalib.com/uploads/ware/3/31/318ae43d9eae83b70b4f0487db0c1f30.jpg"}]'
+                            data-sort="21" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">03.薪级划分方法</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>10:29</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">10:29</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-course_id=8573048 data-pc_pic="https://ke.mbalib.com/uploads/course/8/87/87eafb0fa0582997d0783f87dd250d66.png"
+                            data-url="https://media.mbalib.com/ketang/9/92/9240071f9f6ea36ece0ea3db24bf99c3.mp3?auth_key=1604818320-0-0-765523a244ee14fcc2e125af99339391" data-time="839"
+                            data-id="1393" data-islisten="0"
+                            data-title="04.薪酬体系的设计"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/5/5e/5ec803614f10b224bffdfae7712c957f.jpg"},{"sort":2,"time":"54","pic":"https://ke.mbalib.com/uploads/ware/0/04/047c8f4c9a87ebc01c7b50dd55da6cb9.jpg"},{"sort":3,"time":"82","pic":"https://ke.mbalib.com/uploads/ware/9/9a/9afcb812cb7ff7633c9b94ad17e88ea5.jpg"},{"sort":4,"time":"231","pic":"https://ke.mbalib.com/uploads/ware/d/d5/d5ac46c96db243179d2c424b298e435b.jpg"},{"sort":5,"time":"316","pic":"https://ke.mbalib.com/uploads/ware/0/01/015208f61cf1e8ef1f8f7b64b7314060.jpg"},{"sort":6,"time":"656","pic":"https://ke.mbalib.com/uploads/ware/7/73/73c23ba648bc0d2375268d5ab73fa890.jpg"},{"sort":7,"time":"676","pic":"https://ke.mbalib.com/uploads/ware/c/cd/cd6604df7887823c0491fed59b6c6cc3.jpg"},{"sort":8,"time":"748","pic":"https://ke.mbalib.com/uploads/ware/e/ea/ea77966b0d8ead7b6b7ea389b443072d.jpg"}]'
+                            data-sort="22" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">04.薪酬体系的设计</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>13:59</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">13:59</span>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+    <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1394" >6.全员薪酬结构设计</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-09-06 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-course_id=8573019 data-pc_pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-url="https://media.mbalib.com/ketang/9/9d/9de390770fdae6947f26743e47c20626.mp3?auth_key=1604818320-0-0-81b448ad08e09acef04422b1be704a3a" data-time="525"
+                            data-id="1394" data-islisten="0"
+                            data-title="01.合理的固定和变动收入的分配"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/e/e5/e5c992021f6aabb91b27b47b2544309f.jpg"},{"sort":2,"time":"13","pic":"https://ke.mbalib.com/uploads/ware/f/f4/f4a04101a66da57f811598db13189e6b.jpg"},{"sort":3,"time":"87","pic":"https://ke.mbalib.com/uploads/ware/d/d1/d1ff5114ca646455d4b6ffd81e215478.jpg"},{"sort":4,"time":"210","pic":"https://ke.mbalib.com/uploads/ware/8/8a/8a8f9c815139b26ca100d9087caa538a.jpg"},{"sort":5,"time":"290","pic":"https://ke.mbalib.com/uploads/ware/5/5c/5c3501d1676452b21f0613ed30b1836a.jpg"},{"sort":6,"time":"462","pic":"https://ke.mbalib.com/uploads/ware/7/74/74ecb9d17b70901b3eb795408373cb70.jpg"}]'
+                            data-sort="23" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.合理的固定和变动收入的分配</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>08:45</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">08:45</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-course_id=8573019 data-pc_pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-url="https://media.mbalib.com/ketang/f/f0/f0caac22a294b89dcf6dc8de37a7d6c4.mp3?auth_key=1604818320-0-0-c50a6974a3af27a4a3d131c7f1dd0b8c" data-time="599"
+                            data-id="1395" data-islisten="0"
+                            data-title="02.3大案例剖析"
+                            data-ware='[{"sort":1,"time":"2","pic":"https://ke.mbalib.com/uploads/ware/c/cc/cca98ab4afd8eb98e1428cc74693b66c.jpg"},{"sort":2,"time":"224","pic":"https://ke.mbalib.com/uploads/ware/a/a1/a1426e4f763a0033a26a3443eb116edd.jpg"},{"sort":3,"time":"306","pic":"https://ke.mbalib.com/uploads/ware/a/af/af15e21c47a5d7c191c8cf0416effb1e.jpg"}]'
+                            data-sort="24" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.3大案例剖析</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>09:59</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">09:59</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-course_id=8573019 data-pc_pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-url="https://media.mbalib.com/ketang/1/16/16f4807e8463d23f144f92f3634ec985.mp3?auth_key=1604818320-0-0-df5b4edd1143bca220195d01f587f76a" data-time="194"
+                            data-id="1396" data-islisten="0"
+                            data-title="03.薪酬结构的四种分类"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/e/e3/e376dc663dddf31a20f0aa1cf826c1de.jpg"}]'
+                            data-sort="25" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">03.薪酬结构的四种分类</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>03:14</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">03:14</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-course_id=8573019 data-pc_pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-url="https://media.mbalib.com/ketang/2/22/22fde7e773d045cf236ba83528366a9f.mp3?auth_key=1604818320-0-0-fb9955ae77d18310e15a9b8c8ed5f5e8" data-time="470"
+                            data-id="1397" data-islisten="0"
+                            data-title="04.销售人员的薪酬结构"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/6/6a/6ad8235b5a3ed270e0c830feca2d74f1.jpg"},{"sort":2,"time":"228","pic":"https://ke.mbalib.com/uploads/ware/2/20/20312f266b665e3ce8167a94841a0999.jpg"}]'
+                            data-sort="26" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">04.销售人员的薪酬结构</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>07:50</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">07:50</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-course_id=8573019 data-pc_pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-url="https://media.mbalib.com/ketang/9/90/906f3d26eee81ff830e3aa0f194b6150.mp3?auth_key=1604818320-0-0-8aff0fb108a1e7b0ab4f15582bc04009" data-time="389"
+                            data-id="1398" data-islisten="0"
+                            data-title="05.销售管理人员的薪酬结构"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/a/a6/a6058ba9a5d0f3d22a12983e29fbfd62.jpg"},{"sort":2,"time":"68","pic":"https://ke.mbalib.com/uploads/ware/0/06/065f4792674ad57514b159fecebee8ce.jpg"}]'
+                            data-sort="27" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">05.销售管理人员的薪酬结构</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>06:29</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">06:29</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-course_id=8573019 data-pc_pic="https://ke.mbalib.com/uploads/course/5/5f/5fb5ff3eadbcbc2a543811c50bdc3175.png"
+                            data-url="https://media.mbalib.com/ketang/c/ca/ca0885e541588674690c1191567e65b7.mp3?auth_key=1604818320-0-0-e1167520f8a025c641a1daca0c3560e9" data-time="78"
+                            data-id="1399" data-islisten="0"
+                            data-title="06.全面薪酬"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/c/c6/c6e5efddce5924f48f0069b013dde6c8.jpg"}]'
+                            data-sort="28" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">06.全面薪酬</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>01:18</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">01:18</span>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+    <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1506" >7.薪酬调整制度风险防范</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-09-13 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-course_id=8573114 data-pc_pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-url="https://media.mbalib.com/ketang/c/c2/c2f49ee2a3b90cb54acc269992615451.mp3?auth_key=1604818320-0-0-488632ceaece15c24b9535ddb8c618c0" data-time="171"
+                            data-id="1506" data-islisten="0"
+                            data-title="01.薪酬管理制度介绍"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/9/95/95ea1f40a207090e9e9b07c9db5774e2.jpg"},{"sort":2,"time":"10","pic":"https://ke.mbalib.com/uploads/ware/d/db/dbb13ce981d1bc5e7fdb091a2f5caf0a.jpg"},{"sort":3,"time":"28","pic":"https://ke.mbalib.com/uploads/ware/c/c2/c2edb506898d0e208dec8227fd0838e1.jpg"}]'
+                            data-sort="29" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.薪酬管理制度介绍</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>02:51</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">02:51</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-course_id=8573114 data-pc_pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-url="https://media.mbalib.com/ketang/3/33/331e368e27c3ca6bbc4a0aba504d0773.mp3?auth_key=1604818320-0-0-643f33ce0893c592ed11251d90463313" data-time="708"
+                            data-id="1507" data-islisten="0"
+                            data-title="02.激励的调整"
+                            data-ware='[{"sort":1,"time":"6","pic":"https://ke.mbalib.com/uploads/ware/7/71/712a77a82a2eb2a267b69a5ab185d027.jpg"},{"sort":2,"time":"252","pic":"https://ke.mbalib.com/uploads/ware/c/c8/c8d5bf7c98a0cb9ccdfd4ef873c9622c.jpg"}]'
+                            data-sort="30" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.激励的调整</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>11:48</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">11:48</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-course_id=8573114 data-pc_pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-url="https://media.mbalib.com/ketang/1/14/145a0ad77af10477ce67f5bc488ec74e.mp3?auth_key=1604818320-0-0-d9b18fab9cc15036047591e006309ad6" data-time="805"
+                            data-id="1508" data-islisten="0"
+                            data-title="03.奖金的设计"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/b/b0/b093008cf48d2901fdc6056e2f62bd07.jpg"},{"sort":2,"time":"306","pic":"https://ke.mbalib.com/uploads/ware/6/6a/6abb0f9e2a9b0dd23dc72273304e1635.jpg"},{"sort":3,"time":"444","pic":"https://ke.mbalib.com/uploads/ware/2/27/27d210e874ff97d58928ebc6d4f385d4.jpg"}]'
+                            data-sort="31" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">03.奖金的设计</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>13:25</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">13:25</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-course_id=8573114 data-pc_pic="https://ke.mbalib.com/uploads/course/9/97/9702e1d03f131ebc2123c232976566d2.png"
+                            data-url="https://media.mbalib.com/ketang/a/a5/a5a6c2343668104110b9c6295abcee5f.mp3?auth_key=1604818320-0-0-d6ee314f7ae6d887ce170d200f643bf4" data-time="738"
+                            data-id="1509" data-islisten="0"
+                            data-title="04.绩效工资调整制度及策略"
+                            data-ware='[{"sort":1,"time":"2","pic":"https://ke.mbalib.com/uploads/ware/a/a0/a01f8b97f5679da3f0d1620e497ea1ab.jpg"},{"sort":2,"time":"326","pic":"https://ke.mbalib.com/uploads/ware/3/32/32120159660952e35ead5600421f7313.jpg"},{"sort":3,"time":"334","pic":"https://ke.mbalib.com/uploads/ware/2/2e/2e711ee6666dbe20a35047cf2b49af45.jpg"},{"sort":4,"time":"358","pic":"https://ke.mbalib.com/uploads/ware/1/1f/1f5d0e0d080e63d9551d317ca80edfb2.jpg"},{"sort":5,"time":"382","pic":"https://ke.mbalib.com/uploads/ware/3/33/335c033b03b227037c1b15be6a7b4568.jpg"},{"sort":6,"time":"426","pic":"https://ke.mbalib.com/uploads/ware/1/13/13ef3c364a63110198e61e67889871c4.jpg"},{"sort":7,"time":"495","pic":"https://ke.mbalib.com/uploads/ware/7/7a/7a85d142656be90c1e8a54d545e725e7.jpg"},{"sort":8,"time":"540","pic":"https://ke.mbalib.com/uploads/ware/e/ed/ed7fb3b6d79d8029a8715906e1bd874d.jpg"}]'
+                            data-sort="32" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">04.绩效工资调整制度及策略</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>12:18</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">12:18</span>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+    <div class="ke-lay1 ke-lay1-style mb-10">
+        <div class="head-title-box">
+            <a href="javascript:void(0)"
+               class="ico-updown ico-down fr"></a>
+                            <h4 class="head-title head-title3 addclass">
+                                        <span><a href="/column/play?id=10&mid=1510" >8.员工薪酬入级</a></span>
+                </h4>
+        </div>
+        <div class="head-title2">
+            <span class="fz-color-gray fz-16 fl">开课时间：2017-09-13 20:00</span>
+                    </div>
+                    <div class="ke-lay2">
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/c/c0/c0803fe7ac4413af5bfaacdc8a268c73.png"
+                            data-course_id=8573085 data-pc_pic="https://ke.mbalib.com/uploads/course/c/c0/c0803fe7ac4413af5bfaacdc8a268c73.png"
+                            data-url="https://media.mbalib.com/ketang/0/08/08bc57011f0dcc51d3c87bbf00b8a505.mp3?auth_key=1604818320-0-0-1753a1e688255787784ed9bbf36805a5" data-time="571"
+                            data-id="1510" data-islisten="0"
+                            data-title="01.职级分为划分及相关说明"
+                            data-ware='[{"sort":1,"time":"1","pic":"https://ke.mbalib.com/uploads/ware/1/1d/1d1b25de693d94025bc4440159c56c13.jpg"},{"sort":2,"time":"10","pic":"https://ke.mbalib.com/uploads/ware/5/55/55ac6367ffb776116b02b070857ebde6.jpg"},{"sort":3,"time":"201","pic":"https://ke.mbalib.com/uploads/ware/6/6d/6d070d82bb2b52e5f707f8272e730e6f.jpg"},{"sort":4,"time":"243","pic":"https://ke.mbalib.com/uploads/ware/6/64/64e65d1fb247396c5848b8079d38175c.jpg"},{"sort":5,"time":"500","pic":"https://ke.mbalib.com/uploads/ware/e/e1/e143593b041e64052282fa9a51c999e5.jpg"}]'
+                            data-sort="33" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">01.职级分为划分及相关说明</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>09:31</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">09:31</span>
+			                    </a>
+                                    <a href="javascript:void(0)"                            class=" less-list material less-list2"
+                            data-pic="https://ke.mbalib.com/uploads/course/c/c0/c0803fe7ac4413af5bfaacdc8a268c73.png"
+                            data-course_id=8573085 data-pc_pic="https://ke.mbalib.com/uploads/course/c/c0/c0803fe7ac4413af5bfaacdc8a268c73.png"
+                            data-url="https://media.mbalib.com/ketang/d/d5/d5a5fb36c804a8829057c8138965b2d5.mp3?auth_key=1604818320-0-0-bb6675f692014cd4acc8c569435d2b0f" data-time="932"
+                            data-id="1511" data-islisten="0"
+                            data-title="02.职位等级划分技巧"
+                            data-ware='[{"sort":1,"time":"6","pic":"https://ke.mbalib.com/uploads/ware/6/64/64b5627314080bf55cb8e7fcb0ab4acb.jpg"},{"sort":2,"time":"64","pic":"https://ke.mbalib.com/uploads/ware/1/13/1327da0ea3cd8f097d991d82201ae0b3.jpg"},{"sort":3,"time":"84","pic":"https://ke.mbalib.com/uploads/ware/8/8f/8fdff762b40ac485a376db74c14237f3.jpg"},{"sort":4,"time":"319","pic":"https://ke.mbalib.com/uploads/ware/9/95/955443cf07a24ad3e843d32bf0bcc45e.jpg"},{"sort":5,"time":"655","pic":"https://ke.mbalib.com/uploads/ware/9/9c/9cfbd5f01ca6a462d5a015be722c3c9f.jpg"},{"sort":6,"time":"795","pic":"https://ke.mbalib.com/uploads/ware/8/8a/8a637e2f4b1b48fbc71bf9126a60f2a9.jpg"}]'
+                            data-sort="34" data-type="audio"
+			    data-learntime="0"
+                            data-draft="1">
+                        <span class="less-ico less-ico2"></span>
+
+                        <p class="less-text addclass">                            <span class="text">02.职位等级划分技巧</span></p>
+
+						<div class="front-note fz-color-gray3 hid front_note1">
+				<span>15:32</span>
+				<span class="fz-14 m_radio">已学0%</span>
+			</div>
+			<span class="front-note fz-color-gray3 front_note2">15:32</span>
+			                    </a>
+                            </div>
+	<!-- 作业 -->
+	            </div>
+
+<script>
+
+    (function () {
+        $(function () {
+
+            if ($("#signup_course_show").is(':visible') && issignup != 1) {
+                $(".addclass").addClass('signup_course_show')
+            }
+            $(".ico-updown").click(function () {
+                if ($(this).hasClass('ico-down')) {
+                    $(this).addClass('ico-up');
+                    $(this).removeClass('ico-down');
+                    $(this).parents(".head-title-box").siblings(".ke-lay2").addClass('hid');
+                } else {
+                    $(this).removeClass('ico-up');
+                    $(this).addClass('ico-down');
+                    $(this).parents(".head-title-box").siblings(".ke-lay2").removeClass('hid');
+                }
+            });
+        });
+    })();
+
+</script>
+    </div>
+    </div>
+
+
+    <!--评论-->
+   <script type="text/javascript">
+var dataUrl = "/api/GetCourseCommentV2";
+var nextUrl = "";
+var scrollType = "comment_v2";
+var nextScrollType = "";
+var start = "0";
+var param = "";
+var c_start = 0;
+var endtime = '';
+var dataNone = 0;
+var loadState = 0;
+var loadId = new Array();
+var loadId2 = new Array();
+var ajax = "";
+var dataCid = "";
+var serverUrl = "https://img.mbalib.com";
+var isPc = wfIsPc();
+var role = '';
+var hasData = 0;
+var realnum = 0;
+var issignup = "1";
+var scrollDiv = "comment_main";
+var showicon = "";
+
+$(function(){
+	var imgHeight = getHeight();
+	if(ajax == 1)
+		loadData(imgHeight);
+
+	if(scrollDiv)
+	{
+		scrollDiv = $("#"+scrollDiv);
+	}else
+	{
+		scrollDiv = $(window);
+	}
+
+
+	scrollDiv.scroll(function(){
+		if($(document).scrollTop()>=$(document).height()-$(window).height()-60)
+		{
+			if(loadState == 1) return false;
+			loadState = 1;
+			if(dataNone == 0)
+			{
+				loadData(imgHeight);
+			}
+		}
+	});
+
+	$(".aq-box").each(function(){
+		loadId.push(Number($(this).attr('data-id')));
+	});
+});
+
+
+
+	function loadData(height)
+	{
+	    switch (scrollType) {
+            case 'home':
+                loadHomeData('');
+                break;
+            case 'free':
+                loadHomeData('free');
+                break;
+            case 'class':
+                loadClassData();
+                break;
+            case 'package':
+                loadPackage();
+                break;
+            case 'voucherCourse':
+                loadVoucherCourse();
+                break;
+            case 'category':
+                loadCategoryData();
+                break;
+            case 'comment':
+                loadCommentData();
+                break;
+            case 'comment_v2':
+                loadCommentDataV2();
+                break;
+            case 'listen':
+                loadListenData();
+                break;
+            case 'collect':
+                loadCollectData();
+                break;
+            case 'gift':
+                loadGiftData();
+                break;
+            case 'columnCourse':
+                loadColumnCourseData();
+                break;
+            case 'column':
+                loadColumnData();
+                break;
+            case 'userlisten':
+                loadUserCourseData();
+                break;
+            case 'distribution':
+                loadUserDistributionData();
+                break;
+            case 'distributiondetail':
+                loadDistributionDetailData();
+                break;
+            case 'distributionuser':
+                loadDistributionUserData();
+                break;
+            case 'distributionsource':
+                loadDistributionSourceData();
+                break;
+            case 'withdraw':
+                loadWithdrawData();
+                break;
+            case 'rank':
+                loadRankData();
+                break;
+            case 'signupuser':
+                loadSignupuserData();
+                break;
+            case 'task':
+                loadTask();
+                break;
+            case 'signup':
+                loadSignup();
+                break;
+            case 'certificate':
+                loadCertificate();
+                break;
+            case 'signin':
+                loadSignin();
+                break;
+            case 'search':
+                loadSearch();
+                break;
+            case 'homepageadd':
+                loadHomepageadd();
+                break;
+            case 'homepagedelete':
+                loadHomepagedelete();
+                break;
+            case 'homepagecourse':
+                loadHomepagecourse();
+                break;
+            case 'classmember':
+                loadClassmember();
+                break;
+            case 'coursemember':
+                loadCourseMember();
+                break;
+            case 'userorder':
+                loadUserOrder();
+                break;
+            case 'couserorder':
+                loadCourseOrder();
+                break;
+            default:
+                break;
+        }
+	}
+
+	function hasScrollbar() {
+		return document.body.scrollHeight > (window.innerHeight || document.documentElement.clientHeight);
+	}
+
+
+	function resetLoad()
+	{
+		loadId = new Array();
+		start = 0;
+		c_start = 0;
+		loadState = 0;
+		endtime = '';
+	}
+
+	function choicePackageLogo(_package)
+	{
+		var logo;
+		if(isPc)
+		{
+			logo = _package.package_logo;
+		}else
+		{
+			//logo = course.course_logo;
+			logo = _package.package_thumb_logo;
+		}
+		return logo;
+	}
+
+	function choiceCourseLogo(course)
+	{
+		var logo;
+		if(isPc)
+		{
+			logo = course.course_logo;
+		}else
+		{
+			//logo = course.course_logo;
+			logo = course.course_thumb_logo;
+		}
+		return logo;
+	}
+
+	function choiceColumnLogo(column)
+	{
+		var logo;
+		if(wfIsPc())
+		{
+			logo = column.column_logo;
+		}else
+		{
+			logo = column.column_thumb_logo;
+		}
+		return logo;
+	}
+
+	function choiceLogo(item)
+	{
+		var logo;
+		if(wfIsPc())
+		{
+			logo = item.logo;
+		}else
+		{
+			logo = item.thumb_logo;
+		}
+		return logo;
+	}
+
+	var isStick = 1;
+	function loadHomeData(isfree)
+	{
+		dataNone = 1;
+		if(isfree == 'free')
+		{
+			var getUrl = dataUrl;
+			var free = 1;
+		}else
+		{
+			var free = 0;
+			var stickUrl = "/list/AjaxGetStick";
+			var getUrl = '';
+			if(isStick == 1)
+			{
+				getUrl = stickUrl;
+				isStick = 0;
+			}else
+			{
+				getUrl = dataUrl;
+			}
+		}
+		$(".loading").show();
+		if(typeof(category) == 'undefined') category = 0;
+		$.post(getUrl,{start:start,endtime:endtime,c_start:c_start,free:free,category:category},function(data){
+			result = data.data;
+			start = data.start;
+			c_start = data.c_start;
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var logo = '';
+				var price = '';
+				for(var i in result)
+				{
+					if(getUrl != stickUrl)
+					{
+						endtime = result[i].course_onlinetime;
+					}
+					if(result[i].course_id)
+					{
+						if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].course_id);
+					}else if(result[i].column_id)
+					{
+						if($.inArray(result[i].column_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].column_id);
+					}else if(result[i].package_id)
+					{
+						if($.inArray(result[i].package_id, loadId2) != -1) continue;//去重
+						loadId2.push(result[i].package_id);
+					}
+					else
+					{
+						continue;
+					}
+
+
+					var discounts = '';
+					var discounts2 = '';
+					var learn_times = '';
+					if(result[i].package_id)
+					{
+						var url = '/package/'+result[i].package_id;
+						var logo = choicePackageLogo(result[i]);
+						var title = result[i].package_title;
+						var courses = result[i].package_courses;
+						var price = result[i].package_price;
+						var ke_type = 'ke_package';
+						var ke_id = result[i].package_id;
+					}
+					else if(result[i].column_id)
+					{
+						var clogo = '';
+						var ctitle = '';
+						var url = '/column/'+result[i].column_id;
+						var follow = '';
+						var logo = choiceColumnLogo(result[i]);
+						var time = "已更新"+result[i].column_courses+"期";
+						var description = result[i].column_description;
+						var price = result[i].column_price;
+						var signup = result[i].column_signup;
+						var learn_times = result[i].column_play_times;
+						var title = result[i].column_title;
+						var ke_type = 'column';
+						var ke_id = result[i].column_id;
+						if(result[i].column_charge_type && result[i].exist_coupon == 1)
+						{
+							discounts = '<span class="tab-ico"></span>';
+							discounts2 = '<i class="yh-tag fr">优惠</i>'; /* 这里需要处理 result[i].column_icon_path */
+
+						}
+						var charge_type = result[i].column_charge_type;
+					}else
+					{
+
+							var url = '/course/'+result[i].course_id;
+							var logo = choiceCourseLogo(result[i]);
+							var time = wfTimeDate(result[i].course_time);
+							var description = result[i].course_description;
+							var price = result[i].course_price;
+							var signup = result[i].course_signup;
+							var learn_times = result[i].course_play_times;
+							var title = result[i].course_title;
+							var charge_type = result[i].course_charge_type;
+							var ke_type = 'course';
+							var ke_id = result[i].course_id;
+							if(result[i].exist_coupon == 1)
+							{
+								discounts = '<span class="tab-ico"></span>';
+								discounts2 = '<i class="yh-tag fr">优惠</i>'; /* 这里需要处理 result[i].column_icon_path */
+							}
+							//num ++;
+					}
+
+					if(result[i].url)
+					{
+						url = result[i].url;
+					}
+
+					if(url)
+					{
+						if(typeof(voucher_key) != 'undefined')
+						{
+							url = url + '?vu=' + voucher_key;
+						}
+					}
+
+
+
+					if(price == 0.00)
+					{
+						price = '<span class="fr"><i class="fz-22">免费</i></span>';
+					}else
+					{
+						price = '<span class="fr">￥<i class="fz-22">'+price+'</i></span>';
+					}
+
+                    var activeHtml = getActiveHtml(result[i].actives);
+
+					if(result[i].package_id)
+					{
+						str += '<div class="lesson-lay lesson-lay5 go-course course_a" data-type="'+ke_type+'" data-id="'+ke_id+'">'+
+                            '<a href="'+url+'">'+
+							'<div class="head-image-num3 fl"><img src="'+logo+'">'+discounts+'</div>'+
+							'<div class="lesson-r-box">'+
+							'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+							'<div class="bottom fz-18">'+
+							'<span class="fz-16 time">'+courses+'门课程</span>'+
+							'<span class="pice">'+price+'</span>'+
+							'</div>'+
+							'</div></a>'+ activeHtml +
+							'</div>';
+					}else
+					{
+					str += '<div class="lesson-lay lesson-lay5 go-course course_a" data-type="'+ke_type+'" data-id="'+ke_id+'">'+
+						'<a href="'+url+'" >'+
+						'<div class="head-image-num3 fl"><img src="'+logo+'">'+discounts+'</div>'+
+						'<div class="lesson-r-box">'+
+						'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+						'<div class="bottom fz-18">'+
+						'<span class="fz-16 time">'+learn_times+'次学习</span>'+
+						'<span class="pice">'+price+'</span>'+
+						'</div>'+
+						'</div></a>'+ activeHtml +
+						'</div>';
+					}
+				}
+				$(".loading").before(str);
+				dataNone = 0;
+				//start = Number(start) + Number(num);
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+			if(getUrl == stickUrl)
+			{
+				loadHomeData(isfree);
+			}
+		},'json');
+	}
+
+	function loadClassData()
+	{
+
+		var classKey = "";
+
+		dataNone = 1;
+		$(".loading").show();
+		$.post(dataUrl,{start:start,endtime:endtime,class_id:classKey},function(data){
+			result = data.data;
+			start = data.start;
+			if(start == 0)
+			{
+				$("#ketang-page-kong").removeClass('hid');
+			}
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var logo = '';
+				var price = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num++;
+					if(result[i].course_id)
+					{
+						if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].course_id);
+					}else if(result[i].column_id)
+					{
+						if($.inArray(result[i].column_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].column_id);
+					}else if(result[i].package_id)
+					{
+						if($.inArray(result[i].package_id, loadId2) != -1) continue;//去重
+						loadId2.push(result[i].package_id);
+					}
+					else
+					{
+						continue;
+					}
+
+
+					var discounts = '';
+					var discounts2 = '';
+					if(result[i].package_id)
+					{
+						var url = '/package/'+result[i].package_id;
+						var logo = choicePackageLogo(result[i]);
+						var title = result[i].package_title;
+						var courses = result[i].package_courses;
+						var price = result[i].package_price;
+						var ke_type = 'ke_package';
+						var ke_id = result[i].package_id;
+					}
+					else if(result[i].column_id)
+					{
+						var clogo = '';
+						var ctitle = '';
+						var url = '/column/'+result[i].column_id;
+						var follow = '';
+						var logo = choiceColumnLogo(result[i]);
+						var time = "已更新"+result[i].column_courses+"期";
+						var description = result[i].column_description;
+						var price = result[i].column_price;
+						var signup = result[i].column_signup;
+						var learn_times = result[i].column_play_times;
+						var title = result[i].column_title;
+						var ke_type = 'column';
+						var ke_id = result[i].column_id;
+						if(result[i].column_charge_type && result[i].exist_coupon == 1)
+						{
+							discounts = '<span class="tab-ico"></span>';
+							discounts2 = '<i class="yh-tag fr">优惠</i>'; /* 这里需要处理 result[i].column_icon_path */
+
+						}
+						var charge_type = result[i].column_charge_type;
+					}else
+					{
+
+                        var url = '/course/'+result[i].course_id;
+                        var logo = choiceCourseLogo(result[i]);
+                        var time = wfTimeDate(result[i].course_time);
+                        var description = result[i].course_description;
+                        var price = result[i].course_price;
+                        var signup = result[i].course_signup;
+                        var learn_times = result[i].course_play_times;
+                        var title = result[i].course_title;
+                        var charge_type = result[i].course_charge_type;
+                        var ke_type = 'course';
+                        var ke_id = result[i].course_id;
+                        if(result[i].exist_coupon == 1)
+                        {
+                            discounts = '<span class="tab-ico"></span>';
+                            discounts2 = '<i class="yh-tag fr">优惠</i>'; /* 这里需要处理 result[i].column_icon_path */
+                        }
+							//num ++;
+					}
+
+					if(result[i].url)
+					{
+						url = result[i].url;
+					}
+
+
+
+					if(price == 0.00)
+					{
+						price = '<span class="fr"><i class="fz-22">免费</i></span>';
+					}else
+					{
+						price = '<span class="fr">￥<i class="fz-22">'+price+'</i></span>';
+					}
+
+					var activeHtml = getActiveHtml(result[i].actives);
+
+					if(result[i].package_id)
+					{
+						str += '<div class="lesson-lay lesson-lay5 go-course course_a" data-type="'+ke_type+'" data-id="'+ke_id+'">'+
+                            '<a href="'+url+'" onclick=entranceSet("class","'+classKey+'")>'+
+							'<div class="head-image-num3 fl"><img src="'+logo+'">'+discounts+'</div>'+
+							'<div class="lesson-r-box">'+
+							'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+							'<div class="bottom fz-18">'+
+							'<span class="fz-16 time">'+courses+'门课程</span>'+
+							'<span class="pice">'+price+'</span>'+
+							'</div>'+
+							'</div></a>'+ activeHtml +
+							'</div>';
+					}else
+					{
+					str += '<div class="lesson-lay lesson-lay5 go-course course_a" data-type="'+ke_type+'" data-id="'+ke_id+'">'+
+						'<a href="'+url+'"  onclick=entranceSet("class","'+classKey+'") >'+
+						'<div class="head-image-num3 fl"><img src="'+logo+'">'+discounts+'</div>'+
+						'<div class="lesson-r-box">'+
+						'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+						'<div class="bottom fz-18">'+
+						'<span class="fz-16 time">'+learn_times+'次学习</span>'+
+						'<span class="pice">'+price+'</span>'+
+						'</div>'+
+						'</div></a>'+ activeHtml +
+						'</div>';
+					}
+				}
+				$(".loading").before(str);
+				dataNone = 0;
+				//start = Number(start) + Number(num);
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+
+		},'json');
+	}
+
+	function loadHomepageadd()
+	{
+		dataNone = 1;
+		var free = 0;
+		var stickUrl = "/list/AjaxGetStick";
+		var getUrl = '';
+		if(isStick == 1)
+		{
+			getUrl = stickUrl;
+			isStick = 0;
+		}else
+		{
+			getUrl = dataUrl;
+		}
+		$(".loading").show();
+		if(typeof(category) == 'undefined') category = 0;
+		$.post(getUrl,{start:start,endtime:endtime,c_start:c_start,category:category},function(data){
+			result = data.data;
+			start = data.start;
+			c_start = data.c_start;
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var price = '';
+				for(var i in result)
+				{
+					num++;
+					if(getUrl != stickUrl)
+					{
+						endtime = result[i].course_onlinetime;
+					}
+					if(result[i].course_id)
+					{
+						if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+                        if(result[i].course_homepage_authority==="0") continue;
+						loadId.push(result[i].course_id);
+					}else if(result[i].column_id)
+					{
+						if($.inArray(result[i].column_id, loadId) != -1) continue;//去重
+                        if(result[i].column_homepage_authority==="0") continue;
+						loadId.push(result[i].column_id);
+					}else if(result[i].package_id)
+					{
+						if($.inArray(result[i].package_id, loadId2) != -1) continue;//去重
+                        if(result[i].package_homepage_authority==="0") continue;
+						loadId2.push(result[i].package_id);
+					}
+					else
+					{
+						continue;
+					}
+
+
+					var discounts = '';
+					var discounts2='';
+					var learn_times = '';
+					if(result[i].package_id)
+					{
+						var url = '/package/'+result[i].package_id;
+						var logo = choicePackageLogo(result[i]);
+						var title = result[i].package_title;
+						var courses = result[i].package_courses;
+						var price = result[i].package_price;
+						var ke_type = 'package';
+						var ke_id = result[i].package_id;
+					}
+					else if(result[i].column_id)
+					{
+						var clogo = '';
+						var ctitle = '';
+						var url = '/column/'+result[i].column_id;
+						var follow = '';
+						var logo = choiceColumnLogo(result[i]);
+						var time = "已更新"+result[i].column_courses+"期";
+						var description = result[i].column_description;
+						var price = result[i].column_price;
+						var signup = result[i].column_signup;
+						var learn_times = result[i].column_play_times;
+						var title = result[i].column_title;
+						var ke_type = 'column';
+						var ke_id = result[i].column_id;
+						if(result[i].column_charge_type && result[i].exist_coupon == 1)
+						{
+							discounts = '<span class="tab-ico"></span>';
+                            discounts2 = '<i class="yh-tag fr">优惠</i>';
+						}
+						var charge_type = result[i].column_charge_type;
+					}else
+					{
+							var url = '/course/'+result[i].course_id;
+							var logo = choiceCourseLogo(result[i]);
+							var time = wfTimeDate(result[i].course_time);
+							var description = result[i].course_description;
+							var price = result[i].course_price;
+							var signup = result[i].course_signup;
+							var learn_times = result[i].course_play_times;
+							var title = result[i].course_title;
+							var charge_type = result[i].course_charge_type;
+							var ke_type = 'course';
+							var ke_id = result[i].course_id;
+							if(result[i].exist_coupon == 1)
+							{
+								discounts = '<span class="tab-ico"></span>';
+                                discounts2 = '<i class="yh-tag fr">优惠</i>';
+							}
+					}
+
+					title = HTMLEnCode(title);
+
+					if(result[i].url)
+					{
+						url = result[i].url;
+					}
+
+
+
+					if(price == 0.00)
+					{
+						price = "免费";
+					}else
+					{
+						price = "￥" + price;
+					}
+
+					if(result[i].column_id)
+					{
+					}
+
+
+					 str += '<a href="javascript:void(0)" class="lesson-lay lesson-lay7 homepage" data-type='+ke_type+' data-id='+ke_id+'>'+
+						'<i class="check check1 fr" data-type='+ke_type+' data-id='+ke_id+'></i>'+
+						'<div class="head-image-num3 fl"><img src="'+logo+'"></div>'+
+						'<div class="lesson-r-box">'+
+						'<h6 class="tit">'+HTMLEnCode(title)+'</h6>'+
+                         '<div class="bottom">'+
+                         '<span class="pice fl"><i class="fz-20">'+price+'</i>'+
+                         '</span></div>'+
+                         '</div>'+
+						'</a>';
+				}
+				$(".loading").before(str);
+				dataNone = 0;
+				//start = Number(start) + Number(num);
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+
+		},'json');
+	}
+
+	function loadHomepagecourse()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var logo = '';
+				var price = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num++;
+
+					if(result[i].course_id)
+					{
+						if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].course_id);
+					}else if(result[i].column_id)
+					{
+						if($.inArray(result[i].column_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].column_id);
+					}else if(result[i].package_id)
+					{
+						if($.inArray(result[i].package_id, loadId2) != -1) continue;//去重
+						loadId2.push(result[i].package_id);
+					}
+					else
+					{
+						continue;
+					}
+
+
+					var recommend = '';
+					var discounts2 ='';
+					var learn_times = '';
+					if(result[i].package_id)
+					{
+						var url = '/package/'+result[i].package_id;
+						var logo = choicePackageLogo(result[i]);
+						var title = result[i].package_title;
+						var courses = result[i].package_courses;
+						var price = result[i].package_price;
+						var ke_type = 'package';
+						var ke_id = result[i].package_id;
+						if(result[i].recommend == 1)
+						{
+							recommend = '<span class="tab-ico3"></span>';
+						}
+					}
+					else if(result[i].column_id)
+					{
+						var clogo = '';
+						var ctitle = '';
+						var url = '/column/'+result[i].column_id;
+						var follow = '';
+						var logo = choiceColumnLogo(result[i]);
+						var time = "已更新"+result[i].column_courses+"期";
+						var description = result[i].column_description;
+						var price = result[i].column_price;
+						var signup = result[i].column_signup;
+						var learn_times = result[i].column_play_times;
+						var title = result[i].column_title;
+						var ke_type = 'column';
+						var ke_id = result[i].column_id;
+						if(result[i].recommend == 1)
+						{
+							recommend = '<span class="tab-ico3"></span>';
+						}
+						var charge_type = result[i].column_charge_type;
+					}else
+					{
+							var url = '/course/'+result[i].course_id;
+							var logo = choiceCourseLogo(result[i]);
+							var time = wfTimeDate(result[i].course_time);
+							var description = result[i].course_description;
+							var price = result[i].course_price;
+							var signup = result[i].course_signup;
+							var learn_times = result[i].course_play_times;
+							var title = result[i].course_title;
+							var charge_type = result[i].course_charge_type;
+							var ke_type = 'course';
+							var ke_id = result[i].course_id;
+							if(result[i].recommend == 1)
+							{
+								recommend = '<span class="tab-ico3"></span>';
+							}
+							//num ++;
+					}
+
+					if(result[i].url)
+					{
+						url = result[i].url;
+					}
+
+
+
+					if(price == 0.00)
+					{
+						price = "免费";
+					}else
+					{
+						price = "￥" + price;
+					}
+					if(result[i].exist_coupon == 1)
+					{
+						discounts2 = '<i class="yh-tag fr">优惠</i>';
+					}
+					var learn_str = '';
+					if(learn_times)
+					{
+					    learn_str = '<span class="fz-16 time">'+learn_times+'次学习</span>';
+					}
+
+
+
+					 str += '<a href="'+url+'" class="lesson-lay lesson-lay5 go-course course_a" data-recommend="'
+                         +result[i].recommend+'" data-type="'+ke_type+'" data-id="'+ke_id+'" onclick=entranceSet("shop","'+dataCid+'")>'+
+						'<div class="head-image-num3 fl"><img src="'+logo+'">'+recommend+'</div>'+
+						'<div class="lesson-r-box">'+
+						'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+						'<div class="bottom fz-18">'+
+                         learn_str+
+                         '<span class="pice"><span class="fr"><i class="fz-22">'+price+'</i></span>'+
+                         discounts2+
+                         '</span></div>'+
+						'</div>'+
+						'</a>';
+				}
+				$(".loading").before(str);
+				dataNone = 0;
+				start = Number(start) + Number(num);
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+
+		},'json');
+	}
+
+
+	function loadHomepagedelete()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var logo = '';
+				var num = 0;
+				var price = '';
+				for(var i in result)
+				{
+
+					num++;
+					if(result[i].course_id)
+					{
+						if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].course_id);
+					}else if(result[i].column_id)
+					{
+						if($.inArray(result[i].column_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].column_id);
+					}else if(result[i].package_id)
+					{
+						if($.inArray(result[i].package_id, loadId2) != -1) continue;//去重
+						loadId2.push(result[i].package_id);
+					}
+					else
+					{
+						continue;
+					}
+
+
+					var discounts = '';
+					var discounts2= '';
+					var learn_times = '';
+					if(result[i].package_id)
+					{
+						var url = '/package/'+result[i].package_id;
+						var logo = choicePackageLogo(result[i]);
+						var title = result[i].package_title;
+						var courses = result[i].package_courses;
+						var price = result[i].package_price;
+						var ke_type = 'package';
+						var ke_id = result[i].package_id;
+					}
+					else if(result[i].column_id)
+					{
+						var clogo = '';
+						var ctitle = '';
+						var url = '/column/'+result[i].column_id;
+						var follow = '';
+						var logo = choiceColumnLogo(result[i]);
+						var time = "已更新"+result[i].column_courses+"期";
+						var description = result[i].column_description;
+						var price = result[i].column_price;
+						var signup = result[i].column_signup;
+						var learn_times = result[i].column_play_times;
+						var title = result[i].column_title;
+						var ke_type = 'column';
+						var ke_id = result[i].column_id;
+						if(result[i].column_charge_type && result[i].exist_coupon == 1)
+						{
+							discounts = '<span class="tab-ico"></span>';
+							discounts2='<i class="yh-tag fr">优惠</i>';
+						}
+						var charge_type = result[i].column_charge_type;
+					}else
+					{
+							var url = '/course/'+result[i].course_id;
+							var logo = choiceCourseLogo(result[i]);
+							var time = wfTimeDate(result[i].course_time);
+							var description = result[i].course_description;
+							var price = result[i].course_price;
+							var signup = result[i].course_signup;
+							var learn_times = result[i].course_play_times;
+							var title = result[i].course_title;
+							var charge_type = result[i].course_charge_type;
+							var ke_type = 'course';
+							var ke_id = result[i].course_id;
+							if(result[i].exist_coupon == 1)
+							{
+								discounts = '<span class="tab-ico"></span>';
+								discounts2='<i class="yh-tag fr">优惠</i>';
+							}
+							//num ++;
+					}
+
+					if(result[i].url)
+					{
+						url = result[i].url;
+					}
+
+
+
+					if(price == 0.00)
+					{
+						price = "免费";
+					}else
+					{
+						price = "￥" + price;
+					}
+
+					 str += '<a href="javascript:void(0)" class="lesson-lay lesson-lay7 homepage" data-type='+ke_type+' data-id='+ke_id+'>'+
+						'<i class="check check1 fr" data-type='+ke_type+' data-id='+ke_id+'></i>'+
+						'<div class="head-image-num3 fl"><img src="'+logo+'"></div>'+
+						'<div class="lesson-r-box">'+
+						'<h6 class="tit">'+HTMLEnCode(title)+'</h6>'+
+                         '<div class="bottom">'+
+                         '<span class="pice fl"><i class="fz-20">'+price+'</i>'+
+                         '</span></div>'+
+						'</div>'+
+						'</a>';
+				}
+				$(".loading").before(str);
+				dataNone = 0;
+				start = Number(start) + Number(num);
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+
+		},'json');
+	}
+
+	function loadSearch()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		var key = $("#search_key").val();
+		$.post(dataUrl,{start:start,keyword:key,type:2},function(data){
+		//$.post(dataUrl,{start:start,key:key},function(data){
+			result = data.data.ke;
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var price = '';
+				for(var i in result)
+				{
+					num++;
+
+					//var logo = choiceCourseLogo(result[i]);
+					var logo = (result[i].img);
+					var price = result[i].price;
+					var title = result[i].show_title;
+					var type_arr = result[i].type.split('_');
+					var type = type_arr[1];
+					var url = "/"+type+"/"+result[i].key;
+
+					if(price == 0.00)
+					{
+						price = "免费";
+					}else
+					{
+						price = "￥" + price;
+					}
+
+					if(type == 'package')
+					{
+						var fz_text = result[i].courses + '门课程';
+					}else
+					{
+						var fz_text = result[i].play_times + '次学习';
+					}
+
+					var activeHtml = getActiveHtml(result[i].actives);
+
+                    str += '<div  class="lesson-lay lesson-lay5"><a href="' + url + '">' +
+                        '<div class="head-image-num3 fl">' +
+                        '<img src="' + logo + '">' +
+                        '</div>' +
+                        '<div class="lesson-r-box">' +
+                        '<div class="head"><h6 class="tit">' + HTMLEnCode(title) + '</h6></div>' +
+                        '<div class="bottom fz-18">' +
+                        '<span class="fz-16 fz-color-gray2 fl">' + fz_text + '</span>' +
+                        '<span class="pice fr">' + price + '</span>' +
+                        '</div>' +
+                        '</div>' +
+                        '</a>'+activeHtml+'</div>';
+				}
+				start = Number(start) + Number(num);
+				$(".loading").before(str);
+				dataNone = 0;
+
+			}else
+			{
+				if(start == 0)
+				{
+					$("#no_data").removeClass('hid');
+				}
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+
+		},'json');
+	}
+
+	function loadPackage()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start},function(data){
+			result = data;
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var price = '';
+				for(var i in result)
+				{
+					num++;
+					if(result[i].package_id)
+					{
+						if($.inArray(result[i].package_id, loadId) !== -1){
+                            continue;//去重
+                        }
+						loadId.push(result[i].package_id);
+					}else
+					{
+						continue;
+					}
+
+
+					var discounts = '';
+					var url = '/package/'+result[i].package_id;
+					var logo = choicePackageLogo(result[i]);
+					var description = result[i].package_description;
+					var price = result[i].package_price;
+					var signup = result[i].package_signup;
+					var learn_times = result[i].package_play_times;
+					var title = result[i].package_title;
+					var ke_type = 'ke_package';
+					var ke_id = result[i].package_id;
+					if(result[i].exist_coupon == 1)
+					{
+						discounts = '<span class="tab-ico"></span>';
+					}
+
+					if(result[i].url)
+					{
+						url = result[i].url;
+					}
+
+					if(url)
+					{
+						if(typeof(voucher_key) != 'undefined')
+						{
+							url = url + '?vu=' + voucher_key;
+						}
+					}
+
+
+
+					if(price == 0.00)
+					{
+						price = "免费";
+					}else
+					{
+						price = "￥" + price;
+					}
+
+					var activeHtml = getActiveHtml(result[i].actives);
+
+					str += '<div class="lesson-lay lesson-lay5 go-course"  data-type="'+ke_type+'" data-id="'+ke_id+'">'+
+                        '<a href="'+url+'" >' +
+						'<div class="head-image-num3 fl"><img src="'+logo+'">'+discounts+'</div>'+
+						'<div class="lesson-r-box">'+
+						'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+						'<div class="bottom fz-18">'+
+						'<span class="fz-16 fz-color-gray2 fl">'+result[i].package_courses+'门课程</span>'+
+						'<span class="pice fr">'+price+'</span>'+
+						'</div>'+
+						'</div></a>'+ activeHtml +
+						'</div>';
+
+				}
+				start = Number(start) + Number(num);
+				$(".loading").before(str);
+				dataNone = 0;
+				if(nextScrollType && start < 10)//一次加载完成直接加载下个内容
+				{
+					loadData();
+				}
+			}else
+			{
+				if(nextScrollType)
+				{
+					scrollType = nextScrollType;
+					dataUrl = nextUrl;
+					loadId = loadId2;
+					start = 0;
+					loadState = 0;
+					dataNone = 0;
+					loadData();
+				}else
+				{
+					dataNone = 1;
+				}
+			}
+			$(".loading").hide();
+			loadState = 0;
+
+		},'json');
+	}
+
+
+	function loadVoucherCourse()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{key:param},function(data){
+			result = data;
+			console.log(data);
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				//var num = 0;
+				var logo = '';
+				var price = '';
+				for(var i in result)
+				{
+
+					if(result[i].course_id)
+					{
+						if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].course_id);
+					}else if(result[i].column_id)
+					{
+						if($.inArray(result[i].column_id, loadId) != -1) continue;//去重
+						loadId.push(result[i].column_id);
+					}else if(result[i].package_id)
+					{
+						if($.inArray(result[i].package_id, loadId2) != -1) continue;//去重
+						loadId2.push(result[i].package_id);
+					}
+					else
+					{
+						continue;
+					}
+
+
+					var discounts = '';
+					if(result[i].package_id)
+					{
+						var url = '/package/'+result[i].package_id;
+						var logo = choicePackageLogo(result[i]);
+						var title = result[i].package_title;
+						var courses = result[i].package_courses;
+						var price = result[i].package_price;
+						var ke_type = 'ke_package';
+						var ke_id = result[i].package_id;
+					}
+					else if(result[i].column_id)
+					{
+						var clogo = '';
+						var ctitle = '';
+						var url = '/column/'+result[i].column_id;
+						var follow = '';
+						var logo = choiceColumnLogo(result[i]);
+						var time = "已更新"+result[i].column_courses+"期";
+						var description = result[i].column_description;
+						var price = result[i].column_price;
+						var signup = result[i].column_signup;
+						var learn_times = result[i].column_play_times;
+						var title = result[i].column_title;
+						var ke_type = 'column';
+						var ke_id = result[i].column_id;
+						if(result[i].column_charge_type && result[i].exist_coupon == 1)
+						{
+							discounts = '<span class="tab-ico"></span>';
+						}
+						var charge_type = result[i].column_charge_type;
+					}else
+					{
+							var url = '/course/'+result[i].course_id;
+							var logo = choiceCourseLogo(result[i]);
+							var time = wfTimeDate(result[i].course_time);
+							var description = result[i].course_description;
+							var price = result[i].course_price;
+							var signup = result[i].course_signup;
+							var learn_times = result[i].course_play_times;
+							var title = result[i].course_title;
+							var charge_type = result[i].course_charge_type;
+							var ke_type = 'course';
+							var ke_id = result[i].course_id;
+							if(result[i].exist_coupon == 1)
+							{
+								discounts = '<span class="tab-ico"></span>';
+							}
+							//num ++;
+					}
+
+					if(url)
+					{
+						url = url + '?vu=' + voucher_key;
+					}
+
+
+
+					if(price == 0.00)
+					{
+						price = "免费";
+					}else
+					{
+						price = "￥" + price;
+					}
+
+					if(result[i].package_id)
+					{
+						str += '<a href="'+url+'" class="lesson-lay lesson-lay5 go-course"  data-type="'+ke_type+'" data-id="'+ke_id+'">'+
+							'<div class="head-image-num3 fl"><img src="'+logo+'">'+discounts+'</div>'+
+							'<div class="lesson-r-box">'+
+							'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+							'<div class="bottom fz-18">'+
+							'<span class="fz-16 fz-color-gray2 fl">'+courses+'门课程</span>'+
+							'<span class="pice fr">'+price+'</span>'+
+							'</div>'+
+							'</div>'+
+							'</a>';
+					}else
+					{
+
+					str += '<a href="'+url+'" class="lesson-lay lesson-lay5 go-course" data-type="'+ke_type+'" data-id="'+ke_id+'">'+
+						'<div class="head-image-num3 fl"><img src="'+logo+'">'+discounts+'</div>'+
+						'<div class="lesson-r-box">'+
+						'<div class="head"><h6 class="tit">'+HTMLEnCode(title)+'</h6></div>'+
+						'<div class="bottom fz-18">'+
+						'<span class="fz-16 fz-color-gray2 fl">'+learn_times+'次学习</span>'+
+						'<span class="pice fr">'+price+'</span>'+
+						'</div>'+
+						'</div>'+
+						'</a>';
+					}
+
+				}
+				$(".loading").before(str);
+				//dataNone = 0;
+				dataNone = 1;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+
+		},'json');
+	}
+
+	function loadColumnCourseData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var price = '';
+				for(var i in result)
+				{
+					num ++;
+					if(typeof(remove_id) != "undefined")
+					{
+						if(result[i].course_id == remove_id) continue;
+					}
+					if(!result[i].course_id) continue;
+					if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].course_id);
+
+					realnum++;
+
+
+					var circle = '';
+					if(result[i].course_isbegin == 0)
+					{
+						circle = '<div class="circle circle3 fr">未开始</div>';
+					}else if(result[i].course_audition == 1 && issignup != 1)
+					{
+						circle = '<div class="circle circle4 fr">可试听</div>';
+					}
+					else
+					{
+						circle = '<div class="circle circle1 fr">'+(wfTimeDate(result[i].course_time))+'</div>';
+					}
+
+					if(result[i].course_classtime)
+					{
+						var ctime = result[i].course_classtime;
+					}else if(result[i].course_onlinetime)
+					{
+						var ctime = result[i].course_onlinetime;
+					}else
+					{
+						var ctime = result[i].course_createtime;
+					}
+
+
+					str += '<a href="/course/'+result[i].course_id+'" class="lesson-lay lesson-lay4">'+circle+
+						'<div class="lesson-r-box">'+
+						'<h6 class="tit">'+HTMLEnCode(result[i].course_title)+'</h6>'+
+						'</div>'+
+						'<div class="bottom fz-16">'+
+						'<span class="fz-color-gray">开课时间：'+wfDateFormate5(ctime)+'</span>'+
+						'</div>'+
+						'</a>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+			if(role == 'am')
+			{
+				$(".comment_ishide").addClass("shield-lay");
+			}
+		},'json');
+	}
+
+
+	function loadColumnData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var listen = '';
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].signup_id) continue;
+					if(!result[i].signup_column) continue;
+					if($.inArray(result[i].signup_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].signup_id);
+					hasData++;
+
+					var course = '';
+					if(result[i].course && result[i].course.course_id)
+					{
+						var logo = choiceCourseLogo(result[i].course);
+					 	course = '<a class="lesson-lay column-lay" href="/course/'+result[i].course.course_id+'">'+
+            							'<span class="column-image"><img src="'+logo+'"><i class="big-play-ico"></i></span>'+
+            							'<div class="lesson-r-box">'+
+                							'<h6 class="tit">'+HTMLEnCode(result[i].course.course_title)+'</h6>'+
+                							'<div class="bottom">'+
+                     								'<span class="time-box time-box-blue"><i class="time-ico"></i>'+wfTimeDate(result[i].course.course_time)+'</span>'+
+                    						 		'<span class="fr fz-16 fz-color-gray"><span style="color:#4f8ae8;">'+result[i].signup_islisten+'</span>/'+result[i].signup_column.column_courses+'</span>'+
+                							'</div>'+
+            							'</div>'+
+       							'</a>';
+					}
+					str += '<div class="wrap-bottom">'+
+       						'<a href="/column/'+result[i].signup_course_id+'" class="column-lay-head"><span class="arrow-ico fr"></span><div class="head-name"><span>'+HTMLEnCode(result[i].signup_column.column_title)+'</span></div></a>'+course+
+  						'</div>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadCertificate()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].id) continue;
+					if($.inArray(result[i].id, loadId) != -1) continue;//去重
+					loadId.push(result[i].id);
+					hasData++;
+
+					var code = 'CODE:';
+					var c_href = '';
+					if(result[i].state != 'apply')
+					{
+						code += result[i].key;
+						//var done = '<div class="circle circle1 circle1-shadow fr">Have</div>';
+						var done = '<span class="fz-16 fr" style="color:#22baff">已领取</span>';
+                        c_href = '/certificate?key='+result[i].key;//+ '&name='+result[i].realname;
+//						c_href = result[i].pic;
+					}else
+					{
+						//var done = '<div class="circle circle2 circle2-shadow fr">Get</div>';
+						var done = '<span class="fz-16 fr" style="color:#fabb71">学完可领取</span>';
+						c_href = '/certificate/apply?id='+result[i].id;
+					}
+					/*str += '<a class="lesson-lay lesson-lay4" href='+c_href+'>'+
+            								done+
+          							  '<div class="lesson-r-box">'+
+   							             '<h6 class="tit">'+result[i].title+'</h6>'+
+            							    '<div class="bottom fz-16">'+
+                 							    '<span class="fz-color-gray">'+code+'</span>'+
+              							  '</div>'+
+           							 '</div>'+
+     							  '</a>';*/
+					str += '<a href="'+c_href+'" class="lesson-lay lesson-lay5">'+
+						'<div class="head-image-num3 fl"><img src="'+result[i].logo+'"></div>'+
+						'<div class="lesson-r-box">'+
+						'<div class="head"><h6 class="tit">'+HTMLEnCode(result[i].title)+'</h6></div>'+
+						'<div class="bottom fz-18">'+ done +
+						'<span class="pice fr"></span>'+
+						'</div>'+
+						'</div>'+
+						'</a>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				$(".kong-page").removeClass('hid');
+				$(".kong-page").attr('style','padding-bottom:12rem; padding-bottom:300px\9;');
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadTask()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].id) continue;
+					if($.inArray(result[i].id, loadId) != -1) continue;//去重
+					loadId.push(result[i].id);
+					hasData++;
+
+					var task_type = '单课';
+					if(result[i].column == 1)
+					{
+						task_type = '专栏';
+					}
+					if(result[i].done == 1)
+					{
+						var done = '<div class="circle circle1 circle1-shadow fr">Done</div>';
+					}else
+					{
+						var done = '<div class="circle circle2 circle2-shadow fr">Do&nbsp;it</div>';
+					}
+					str += '<a class="lesson-lay lesson-lay4" href="/#/tasklist?type=course&id='+result[i].id+'">'+
+            								done+
+          							  '<div class="lesson-r-box">'+
+   							             '<h6 class="tit">'+HTMLEnCode(result[i].title)+'</h6>'+
+            							    '<div class="bottom fz-18">'+
+                 							    '<span class="fz-color-b1">'+task_type+'</span>'+
+              							  '</div>'+
+           							 '</div>'+
+     							  '</a>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				$(".kong-page").removeClass('hid');
+				$(".kong-page").attr('style','padding-bottom:12rem; padding-bottom:300px\9;');
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadSignup()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].id) continue;
+					if(result[i].type == 'package')
+					{
+					if($.inArray(result[i].id, loadId2) != -1) continue;//去重
+					loadId2.push(result[i].id);
+					}else
+					{
+						if($.inArray(result[i].id, loadId) != -1) continue;//去重
+						loadId.push(result[i].id);
+					}
+					hasData++;
+
+					var task_type = '单课';
+					var href = '';
+					if(result[i].type == 'column')
+					{
+						href = '/column/'+result[i].id;
+						var learn_times = result[i].column_play_times;
+						task_type = '专栏';
+					}else if(result[i].type == 'package')
+					{
+						href = '/package/'+result[i].id;
+						var learn_times = result[i].package_play_times;
+					}
+					else
+					{
+						href = '/course/'+result[i].id;
+						var learn_times = result[i].course_play_times;
+					}
+
+					var logo = choiceLogo(result[i]);
+					var headTip = '';
+					if(result[i].vip_cancel != 1)
+					{
+						if(result[i].user_vip == 1)
+						{
+							headTip = '<span class="lesson-tip tip2">VIP到期</span>';
+						}else if(result[i].vip == 2)
+						{
+							headTip = '<span class="lesson-tip tip1">VIP免费听</span>';
+						}
+					}
+					var over = '';
+					var over_class = '';
+					var learn = 'Learn';
+					//var div_class = "circle2";
+					var color_style = "color:#fabb71";
+					if(result[i].expire == 1)
+					{
+						//div_class = "circle3";
+						color_style = "color:#ccc";
+					}
+					if(result[i].state == 'disable' || result[i].signup_state == 'disable' || result[i].vip_cancel == 1)
+					{
+						href = 'javascript:;';
+						if(result[i].listen_radio == 100) {
+							//learn = 'Finish';
+							if (result[i].expire != 1) {
+								//div_class = "circle1";
+								color_style = "color:#22baff";
+							}
+						}
+						if(result[i].expire == 1)
+						{
+							 //div_class = "circle3";
+							color_style = "color:#ccc";
+						}
+
+						if(result[i].state == 'disable')
+						{
+							over = '<div class="lesson-lay3 fz-22">课程已结束</div>';
+						}
+						else if(result[i].signup_state == 'disable')
+						{
+							over = '<div class="lesson-lay3 fz-22">课程已冻结</div>';
+						}else if(result[i].vip_cancel == 1)
+						{
+							over = '<div class="lesson-lay3 fz-22">课程已取消参与VIP免费听特权</div>';
+						}
+						over_class = 'pos-rel';
+					}else if(result[i].listen_radio == 100)
+					{
+						if(result[i].listen_radio == 100 && result[i].expire != 1){
+							//div_class = "circle1";
+							color_style = "color:#22baff";
+						}
+
+					}else
+					{
+
+					}
+
+					str += '<a href="'+href+'" class="lesson_signup lesson-lay lesson-lay5 '+over_class+'" data-latest="'+result[i].latest+'" data-type="'+result[i].type+'">'+
+						'<div class="head-image-num3 fl">'+headTip+'<img src="'+logo+'"></div>'+
+						'<div class="lesson-r-box">'+
+						'<div class="head"><h6 class="tit">'+HTMLEnCode(result[i].title)+'</h6></div>'+
+						'<div class="bottom fz-18">'+
+						'<span class="fz-16 fz-color-gray2 fl">'+result[i].learn_times+'次学习</span>'+
+						'<span class="fz-16 fr" style="'+color_style+'">学习进度'+result[i].listen_radio+'%</span>'+
+						'<span class="pice fr"></span>'+
+						'</div>'+
+						'</div>'+ over +
+						'</a>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				$(".kong-page").removeClass('hid');
+				$(".kong-page").attr('style','padding-bottom:12rem; padding-bottom:300px\9;');
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadSignin()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].id) continue;
+					if($.inArray(result[i].id, loadId) != -1) continue;//去重
+					loadId.push(result[i].id);
+					hasData++;
+
+					var task_type = '单课';
+					var href = '';
+					var circle = '';
+					var circle_ins = '';
+					var span_circle = '';
+					if(result[i].type == 'column')
+					{
+						href = '/column/'+result[i].itemid;
+						task_type = '专栏';
+					}else
+					{
+						href = '/course/'+result[i].itemid;
+					}
+
+					if(result[i].state == 'signed')
+					{
+						circle = 'circle1';
+						circle_ins = 'circle-ins';
+						span_circle = '<i class="tit fz-18">今日</i>'+
+							'<span class="fz-18" style="display:block;">已签</span>';
+					}else if(result[i].state == 'nosign')
+					{
+						circle = 'circle2';
+						circle_ins = 'circle-ins2';
+						span_circle = '<i class="tit fz-18">今日</i>'+
+							'<span class="fz-18" style="display:block;">未签</span>';
+					}else if(result[i].state == 'past')
+					{
+						circle = 'circle3';
+						circle_ins = 'circle-ins2';
+						span_circle = '<i class="tit fz-18">活动</i>'+
+							'<span class="fz-18" style="display:block;">结束</span>';
+					}
+
+					str += '<a class="lesson-lay lesson-lay4" href="'+href+'">'+
+							'<div class="circle '+circle+' fr">'+
+								'<span class="'+circle_ins+'">'+ span_circle +
+								'</span>'+
+							'</div>'+
+							'<div class="lesson-r-box">'+
+								'<h6 class="tit">'+HTMLEnCode(result[i].title)+'</h6>'+
+								'<div class="bottom fz-16">'+
+								'<span class="fz-color-b1">'+task_type+'</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fz-color-gray">连续/累计（天）：'+result[i].last_continue_days+'/'+result[i].days+'</span>'+
+								'</div>'+
+							'</div>'+
+						'</a>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				//$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+
+	function loadCategoryData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var price = '';
+				for(var i in result)
+				{
+					num ++;
+					if(typeof(remove_id) != "undefined")
+					{
+						if(result[i].course_id == remove_id) continue;
+					}
+					if($.inArray(result[i].course_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].course_id);
+
+					if(result[i].course_teacher == "undefined")
+					{
+						result[i].course_teacher.teacher_avatar = '';
+						result[i].course_teacher.teacher_name = '';
+					}
+					if(result[i].course_price == 0.00)
+					{
+						price = "免费";
+					}else
+					{
+						price = "￥" + result[i].course_price;
+					}
+
+
+					str +='<a href="/course/'+result[i].course_id+'" class="lesson-lay">'+
+					'<span class="head-image"><img src="'+result[i].course_teacher.teacher_avatar+'" onerror="this.src=\''+serverUrl+'/ketang/images/defalut-avater.jpg\'"><i class="big-play-ico"></i></span>'+
+					'<div class="lesson-r-box">'+
+					'<h6 class="tit"><span class="text">'+HTMLEnCode(result[i].course_title)+'</span></h6>'+
+					'<span class="name">'+HTMLEnCode(result[i].course_teacher.teacher_name)+'</span>'+
+					'<div class="bottom">'+
+					'<span class="time-box time-box-blue"><i class="time-ico"></i>'+wfTimeDate(result[i].course_time)+'</span>'+
+					'<span class="pice fr">'+price+'</span>'+
+					'</div>'+
+					'</div>'+
+					'</a>';
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadListenData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var listen = '';
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].course) continue;
+					if($.inArray(result[i].signup_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].signup_id);
+					if(result[i].signup_islisten == 1)
+					{
+						listen = '<span class="pice fr">未学习</span>';
+					}else
+					{
+						listen = '<span class="fz-18 fz-color-gray fr">已学习</span>';
+					}
+
+					if(result[i].course.course_teacher == "undefined")
+					{
+						result[i].course.course_teacher.teacher_avatar = '';
+						result[i].course.course_teacher.teacher_name = '';
+					}
+
+
+
+					str +='<a href="/course/'+result[i].course.course_id+'" class="lesson-lay">'+
+					'<span class="head-image"><img src="'+result[i].course.course_teacher.teacher_avatar+'" onerror="this.src=\''+serverUrl+'/ketang/images/defalut-avater.jpg\'"><i class="big-play-ico"></i></span>'+
+					'<div class="lesson-r-box">'+
+					'<h6 class="tit"><span class="text">'+HTMLEnCode(result[i].course.course_title)+'</span></h6>'+
+					'<span class="name">'+HTMLEnCode(result[i].course.course_teacher.teacher_name)+'</span>'+
+					'<div class="bottom">'+
+					'<span class="time-box time-box-blue"><i class="time-ico"></i>'+wfTimeDate(result[i].course.course_time)+'</span>'+
+					listen+
+					'</div>'+
+					'</div>'+
+					'</a>';
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadUserCourseData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var listen = '';
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].course) continue;
+					if($.inArray(result[i].signup_id, loadId) != -1) continue;//去重
+					hasData++;
+					loadId.push(result[i].signup_id);
+					if(result[i].signup_islisten == 1)
+					{
+						listen = '<span class="pice fr">未学习</span>';
+					}else
+					{
+						listen = '<span class="fz-18 fz-color-gray fr">已学习</span>';
+					}
+
+					if(result[i].course.course_teacher == "undefined")
+					{
+						result[i].course.course_teacher.teacher_avatar = '';
+						result[i].course.course_teacher.teacher_name = '';
+					}
+
+
+					var logo = choiceCourseLogo(result[i].course);
+					str += ' <a class="lesson-lay column-lay" href="/course/'+result[i].course.course_id+'">'+
+						'<span class="column-image"><img src="'+logo+'"><i class="big-play-ico"></i></span>'+
+						'<div class="lesson-r-box">'+
+						'<h6 class="tit">'+HTMLEnCode(result[i].course.course_title)+'</h6>'+
+						'<div class="bottom">'+
+						'<span class="time-box time-box-blue"><i class="time-ico"></i>'+wfTimeDate(result[i].course.course_time)+'</span>'+
+						'<span class="fr fz-16 fz-color-gray">'+wfDateFormate3(result[i].course.course_createtime)+'</span>'+
+						'</div>'+
+						'</div>'+
+						'</a>';
+
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadCollectData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var signup = '';
+				var price = '';
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].course) continue;
+					if($.inArray(result[i].collect_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].collect_id);
+					hasData++;
+                    if(result[i].course.course_classtime)
+                    {
+                        var ctime = result[i].course.course_classtime;
+                    }else if(result[i].course.course_onlinetime)
+                    {
+                        var ctime = result[i].course.course_onlinetime;
+                    }else
+                    {
+                        var ctime = result[i].course.course_createtime;
+                    }
+
+					str +='<a href="/course/'+result[i].course.course_id+'" class="lesson-lay lesson-lay5">'+
+						'<div class="head-image-num3 fl">'+
+							'<img src="'+result[i].course.course_thumb_logo+'">'+
+						'</div>'+
+						'<div class="lesson-r-box">'+
+							'<div class="head">'+
+								'<h6 class="tit">'+HTMLEnCode(result[i].course.course_title)+'</h6>'+
+							'</div>'+
+							'<div class="bottom fz-18">'+
+								'<span class="fz-color-gray2 pice fr">' + wfDateFormate(ctime)+'</span>'+
+							'</div>'+
+						'</div>'+
+						'</a>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				$("html").attr('id','kong-page');
+				$(".wrap-bottom").hide();
+				$(".kong-page").show();
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadGiftData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var remain = '';
+				var expire = '';
+				for(var i in result)
+				{
+					num ++;
+					if(!result[i].course) continue;
+					if($.inArray(result[i].order_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].order_id);
+					hasData++;
+
+					if(result[i].order_expire == 1)
+					{
+							remain = '<div class="circle circle3 circle1-shadow fr">已过期</div>';
+					}else
+					{
+						if(result[i].order_gift_remain > 0)
+						{
+							remain = '<div class="circle circle1 circle1-shadow fr">余'+result[i].order_gift_remain+'份</div>';
+						}else
+						{
+							remain = '<div class="circle circle3 circle1-shadow fr">已赠完</div>';
+						}
+					}
+
+					if(result[i].order_type == 'gift')
+					{
+						var course_title = result[i].course.course_title;
+						var course_type = '课程';
+					}else if(result[i].order_type == 'gift_column')
+					{
+						var course_title = result[i].course.column_title;
+						var course_type = '专栏';
+					}else if(result[i].order_type == 'gift_package')
+					{
+						var course_title = result[i].course.package_title;
+						var course_type = '课程包';
+					}
+
+					/*if(result[i].course.course_teacher === "undefined")
+					{
+						result[i].course.course_teacher.teacher_avatar = '';
+						result[i].course.course_teacher.teacher_name = '';
+					}*/
+
+					str += '<a class="lesson_signup lesson-lay lesson-lay4 " href="/gift/'+result[i].order_id+'">'+
+						 remain+
+						'<div class="lesson-r-box">'+
+							'<h6 class="tit">'+HTMLEnCode(course_title)+'</h6>'+
+						'</div>'+
+						'<div class="bottom fz-16">'+
+							'<span class="fz-color-b1">'+course_type+'</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fz-color-gray">'+wfDateFormate2(result[i].order_gift_expiretime)+'到期</span>'+
+						'</div>'+
+						'</a>';
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0)
+			{
+				$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadCommentData()
+	{
+		$(".loading").show();
+		var sort = $("#comment_list .sel").attr('data-sort');
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid,type:sort},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				for(var i in result)
+				{
+					if($.inArray(result[i].comment_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].comment_id);
+					hasData++;
+
+					str += '<div class="lesson-lay less-comment-lay">'+
+                  '<span class="head-image"><img src="'+result[i].comment_user.user_avatar+'" onerror="this.src=\''+serverUrl+'/ketang/images/defalut-avater.jpg\'"></span>'+
+                  '<div class="lesson-r-box">'+
+                      '<span class="name comment_ishide shield-lay">'+result[i].comment_user.user_realname+'<a href="javascript:void(0)" data-id="'+result[i].comment_id+'" class="shield-ico shield-no hid"></a></span>'+
+                      '<p class="common-text">'+HTMLEnCode(result[i].comment_content)+'</p>'+
+                      '<div class="bottom">'+
+                           '<span class="common-time fl">'+result[i].comment_createtime+'</span>'+
+                           '<a href="javascript:void(0)" class="fr zan"><span class="zan-num like_num">'+result[i].comment_like+'</span><i class="zan-ico" data-id="'+result[i].comment_id+'" data-type="comment"></i></a>'+
+                      '</div>'+
+                  '</div>'+
+             '</div>';
+					/*str += '<h3>用户名:'+result[i].comment_user.user_realname+'</h3>'+
+					'<h3>内容:'+HTMLEnCode(result[i].comment_content)+' <span class="zan" data-id="'+result[i].comment_id+'" data-type="comment" style="color:green">赞</span></h3>'+
+					'<h3>日期:'+result[i].comment_createtime+'</h3>'+
+					'<h3>点赞:'+result[i].comment_like+'</h3>';*/
+					num ++;
+				}
+				$(".loading").before(str);
+				//$("#comment_div").append(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+			if(role == 'am')
+				$(".shield-ico").show();
+			if(Number(hasData) == 0)
+			{
+				$("#nocomment").show();
+			}else
+			{
+				$("#nocomment").hide();
+			}
+		},'json');
+	}
+
+	function loadCommentDataV2()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		var type = $(".comment_main").attr('data-type');
+		var course_id = $(".comment_main").attr('data-cid');
+		$.post(dataUrl,{start:start,id:course_id,type:type},function(result){
+			result = result.data;
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				var reply_btn = '';
+				var hide_btn = '';
+				if(role == 'am')
+				{
+					reply_btn = '<span class="comment-ico xx-ico fl"></span><span class="zan-num fz-20 fl">回复</span>';
+					hide_btn = '<span class="comment-ico shield-yes fl"></span><span class="zan-num fz-20 fl">屏蔽</span>';
+				}
+				for(var i in result)
+				{
+					if($.inArray(result[i].id, loadId) != -1) continue;//去重
+					loadId.push(result[i].id);
+					hasData++;
+					var replyHide = 'hid';
+					if(result[i].reply)
+					{
+						replyHide = '';
+					}
+
+					var reply = result[i].reply;
+					if(reply) reply = HTMLEnCode(result[i].reply);
+					var user_realname = result[i].user_realname;
+					if(user_realname) user_realname = HTMLEnCode(result[i].user_realname);
+
+					str += '<div class="lesson-lay less-comment-lay">'+
+          '<span class="head-image"><img src="'+result[i].user_avatar+'" onerror="this.src=\''+serverUrl+'/ketang/images/defalut-avater.jpg\'"></span>'+
+          '<div class="lesson-r-box">'+
+              '<div class="shield-lay">'+
+                '<span class="name">'+user_realname+'</span>'+
+                '<div class="fz-14 fz-color-gray">'+result[i].createtime+'</div>'+
+              '</div> '+
+              '<p class="common-text fz-20">'+HTMLEnCode(result[i].content)+'</p>'+
+	      '<div class="reply-lay lesson-lay-t mt-10 '+replyHide+'" data-id="'+result[i].id+'" style="padding:.5rem 1rem;">'+
+                   '<p class="common-text fz-18">回复：'+reply+'</p>'+
+              '</div>'+
+              '<div class="fz-color-b1 fz-16 mt-10">来自：'+HTMLEnCode(result[i].course_title)+'</div>'+
+              '<div class="bottom mt-10">'+
+                   '<a href="javascript:void(0)" class="zan like_comment" data-id="'+result[i].id+'">'+
+                      '<span class="comment-ico zan-ico fl"></span>'+
+                      '<span class="zan-num fz-20 fl like_num">'+result[i].likes+'</span>'+
+                   '</a>'+
+                   '<a href="javascript:void(0)" class="zan reply_comment" data-id="'+result[i].id+'">'+
+                      reply_btn+
+                   '</a>'+
+                   '<a href="javascript:void(0)" class="zan fr hide_comment" data-id="'+result[i].id+'">'+
+                      hide_btn+
+                   '</a>'+
+              '</div>'+
+          '</div>'+
+      '</div>';
+					num ++;
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			if(Number(hasData) == 0)
+			{
+				$(".comment_main").attr('data-nodata',1);
+				$("#nocomment").removeClass('hid');
+			}else
+			{
+				$(".comment_main").attr('data-nodata',0);
+				$("#nocomment").addClass('hid');
+			}
+			loadState = 0;
+		},'json');
+	}
+
+	var isEntire = 1;
+	function loadUserDistributionData()
+	{
+		var entireUrl = "/user/AjaxEntireDistribution";
+		var getUrl = '';
+		if(isEntire == 1)
+		{
+			getUrl = entireUrl;
+			isEntire = 0;
+		}else
+		{
+			getUrl = dataUrl;
+		}
+		$(".loading").show();
+		dataNone = 1;
+		$.post(getUrl,{start:start},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var logo = '';
+				for(var i in result)
+				{
+					if($.inArray(result[i].distribution_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].distribution_id);
+					hasData++;
+					var title = '';
+					if(result[i].distribution_course)
+					{
+						title = result[i].distribution_course.course_title;
+					}else if(result[i].distribution_column)
+					{
+						title = result[i].distribution_column.column_title;
+					}else if(result[i].distribution_package)
+					{
+						title = result[i].distribution_package.package_title;
+					}
+					else if(result[i].distribution_item_id == 0)
+					{
+						title = '全平台分销';
+					}
+					if(title)
+						title = HTMLEnCode(title);
+					else
+						title = '';
+
+					if(result[i].distribution_status == 'enable')
+					{
+						var st = '<span class="fx-status-ico status-blue fz-16">正在分销</span>';
+					}else
+					{
+						var st = '<span class="fx-status-ico status-red fz-16">权限冻结</span>';
+					}
+					var proportion = parseInt(result[i].distribution_proportion * 100);
+
+					str += '<a href="/distribution/detail/'+result[i].distribution_key+'" class="lesson-lay fx-list-lay">'+
+            '<div class="lesson-r-box">'+
+                '<h6 class="tit">'+title+'</h6>'+
+                '<span class="name">分成比例：'+proportion+'%<br>分销收益：'+result[i].distribution_income+'元</span>'+
+            '</div>'+st+
+       '</a>';
+
+					num ++;
+				}
+				$(".loading").before(str);
+				if(getUrl != entireUrl)
+				{
+					start = Number(start) + Number(num);
+				}
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			if(Number(hasData) == 0 && getUrl != entireUrl)
+			{
+				$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}
+			$(".loading").hide();
+			loadState = 0;
+			if(getUrl == entireUrl)
+			{
+				loadUserDistributionData();
+			}
+		},'json');
+	}
+
+	function loadDistributionDetailData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					var ptype = '';
+
+					if($.inArray(result[i].id, loadId) != -1) continue;//去重
+					loadId.push(result[i].id);
+					/*if(result[i].detail_order.order_type == 'gift')
+					{
+						ptype = '<span class="fx-status-ico status-green fz-16">赠礼</span>';
+					}
+					else if(Number(result[i].detail_order.order_voucher) > 0)
+					{
+						ptype = '<span class="fx-status-ico status-orange fz-16">优惠券</span>';
+					}
+					else if(Number(result[i].detail_order.order_voucher) == 0)
+					{
+						ptype = '<span class="fx-status-ico status-blue fz-16">全款</span>';
+					}*/
+
+					if(result[i].avatar)
+					{
+						var avatar = result[i].avatar;
+					}else
+					{
+						var avatar = static_server+"/ketang/images/defalut-avater.jpg";
+					}
+
+					str += '<a href="javascript:void(0)" class="lesson-lay fx-list-lay">'+
+            '<div class="sy-date fl"><b>'+parseInt(result[i].createtime.substring(6,8))+'</b><br><span class="fz-16">'+parseInt(result[i].createtime.substring(4,6))+'月</span></div>'+
+            '<span class="head-image"><img src="'+avatar+'"></span>'+
+            '<div class="fx-list1">'+
+                '<h6 class="fz-20">'+result[i].username+'</h6>'+
+                '<span class="fz-16 fz-color-gray3 pice title">渠道：'+result[i].source+'</span>'+
+            '</div> '+
+	    '<span class="fx-status-ico status-orange fz-16">￥'+result[i].money+'</span>'+
+       '</a>';
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadDistributionUserData()
+	{
+		$(".loading").show();
+		var sort = $("#user_list .sel").attr('data-sort');
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid,type:sort},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					var ptype = '';
+
+					if($.inArray(result[i].rid, loadId) != -1) continue;//去重
+					loadId.push(result[i].rid);
+					hasData++;
+					if(result[i].distribution_income > 0)
+					{
+						ptype = '<span class="fx-status-ico status-green fz-16">已分成</span>';
+					}
+					else
+					{
+						ptype = '<span class="fx-status-ico status-blue fz-16">未分成</span>';
+					}
+
+					if(result[i].user_avatar)
+					{
+						var avatar = result[i].user_avatar;
+					}else
+					{
+						var avatar = static_server+"/ketang/images/defalut-avater.jpg";
+					}
+
+					str += '<a href="javascript:void(0)" class="lesson-lay fx-list-lay">'+
+            '<div class="sy-date fl"><b>'+parseInt(result[i].createtime.substring(6,8))+'</b><br><span class="fz-16">'+parseInt(result[i].createtime.substring(4,6))+'月</span></div>'+
+            '<span class="head-image"><img src="'+avatar+'"></span>'+
+            '<div class="fx-list1">'+
+                '<h6 class="fz-20">'+result[i].user_realname+'</h6>'+
+                '<span class="fz-16 fz-color-gray3 title pice">渠道：'+result[i].source+'</span>'+
+            '</div> '+
+	    '<span class="fx-status-ico status-blue fz-16">￥'+result[i].money+'</span>'+
+       '</a>';
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+			if(Number(hasData) == 0)
+			{
+				$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}
+		},'json');
+	}
+
+	function loadDistributionSourceData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:dataCid},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					if($.inArray(result[i].sid,loadId) != -1) continue;//去重
+					loadId.push(result[i].sid);
+					hasData++;
+
+					if(result[i].status == 'enable')
+					{
+						var st = '<span class="fx-status-ico status-blue fz-16">正在分销</span>';
+					}else
+					{
+						var st = '<span class="fx-status-ico status-red fz-16">权限冻结</span>';
+					}
+
+					str += '<div class="wrap-bottom">'+
+	 '<div class="lesson-lay fx-list-lay">'+
+            '<a class="lesson-r-box" href="/distribution/share/'+dataCid+'?sid='+result[i].sid+'">'+
+                '<h6 class="tit source_title" data-id="'+result[i].sid+'">'+HTMLEnCode(result[i].title)+'</h6>'+
+                '<span class="name">分销关系：'+result[i].people+'人<br>分销收益：'+result[i].money+'元</span>'+
+            '</a>'+st+
+       '</div>'+
+	 '<div class="bottom2 fz-16">'+
+           '<a href="javascript:void(0)" title="编辑名称" class="fl et_source" data-id="'+result[i].sid+'" data-title="'+result[i].title+'">编辑名称</a>'+
+           '<a href="javascript:void(0)" title="查看今日" class="fl fz-color-blue view_source" data-id="'+result[i].sid+'">查看今日</a>'+
+           '<a href="/distribution/share/'+dataCid+'?sid='+result[i].sid+'" title="去推广" class="fl fz-color-blue">去推广</a>'+
+       '</div>'+
+      '</div>';
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+			/*if(Number(hasData) == 0)
+			{
+				$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}else
+			{
+				$("html").attr('id','');
+				$(".kong-page").hide();
+			}*/
+		},'json');
+	}
+
+	function loadWithdrawData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+
+					if($.inArray(result[i].pay_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].pay_id);
+					var stat = '';
+					if(result[i].pay_status == 'clear')
+					{
+						if(result[i].pay_account_type == 'private')
+						{
+							stat = '<span class="fx-status-ico status-green fz-16">微信到账</span>';
+						}else
+						{
+							stat = '<span class="fx-status-ico status-blue fz-16">对公到账</span>';
+						}
+					}else if(result[i].pay_status == 'noclear')
+					{
+						stat = '<span class="fx-status-ico status-orange fz-16">正在结算</span>';
+					}
+
+					str +=' <a href="javascript:void(0)" class="lesson-lay fx-list-lay">'+
+            '<div class="lesson-r-box">'+
+                '<span class="">已申请提现：'+result[i].pay_money+'元</span>'+
+                '<span class="name">'+wfDateFormate(result[i].pay_createtime)+'</span>'+
+            '</div>'+stat+
+       '</a>';
+
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadRankData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:item_id,type:item_type},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				var rankico = '';
+				for(var i in result)
+				{
+					num ++;
+					rankico = '';
+					if($.inArray(result[i].user_id, loadId) != -1) continue;//去重
+					loadId.push(result[i].user_id);
+
+					if (start == 0) {
+                        if(num == 1)
+                        {
+                            rankico = '<span class="yq-list-ico yq-ico-yellow">人气大咖</span>';
+                        }else if(num == 2)
+                        {
+                            rankico = '<span class="yq-list-ico yq-ico-green">人气精英</span>';
+                        }else if(num == 3)
+                        {
+                            rankico = '<span class="yq-list-ico yq-ico-orange">人气能手</span>';
+                        }
+                    }
+
+					if(result[i].user_avatar)
+					{
+						var avatar = result[i].user_avatar;
+					}else
+					{
+						var avatar = static_server+"/ketang/images/defalut-avater.jpg";
+					}
+
+					str += '<a href="javascript:void(0)" class="lesson-lay fx-head-lay">'+
+            '<span class="head-image"><img src="'+avatar+'"></span>'+
+            '<div class="fx-user-l">'+
+                '<div class="yq-list-lay1"><span class="fz-20 name">'+HTMLEnCode(result[i].user_realname)+'</span>'+rankico+'</div>'+
+                '<span class="fz-16 fz-color-gray3">邀请了<b class="fz-color-blue">&nbsp;'+result[i].person_num+'&nbsp;</b>个朋友,共赚取奖金<b class="fz-color-blue">&nbsp;'+result[i].money+'&nbsp;</b>元</span>'+
+            '</div>'+
+       '</a>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+		},'json');
+	}
+
+	function loadSignupuserData()
+	{
+		$(".loading").show();
+		dataNone = 1;
+		$.post(dataUrl,{start:start,id:item_id,type:item_type},function(result){
+			if(!$.isEmptyObject(result))
+			{
+				var str = '';
+				var num = 0;
+				for(var i in result)
+				{
+					num ++;
+					if($.inArray(result[i].id, loadId) != -1) continue;//去重
+					loadId.push(result[i].id);
+					hasData++;
+
+
+					if(result[i].avatar)
+					{
+						var avatar = result[i].avatar;
+					}else
+					{
+						var avatar = static_server+"/ketang/images/defalut-avater.jpg";
+					}
+
+					str += '<div class="lesson-lay fx-head-lay fx-user-first g_user_div">'+
+						'<span class="head-image"><image src="'+avatar+'"></span>'+
+							'<div class="fx-user-l">'+
+							'<div class="yq-list-lay1"><span class="fz-20 name">'+HTMLEnCode(result[i].name)+'</span></div>'+
+						'<span class="fz-14 fz-color-gray3">'+(result[i].time)+'</span>'+
+						'</div>'+
+						'<a href="javascript:void(0)" class="invite-btn fr fz-16 g_user" data-id='+result[i].uid+'>管理</a>'+
+						'</div>';
+				}
+				$(".loading").before(str);
+				start = Number(start) + Number(num);
+				dataNone = 0;
+			}else
+			{
+				dataNone = 1;
+			}
+			$(".loading").hide();
+			loadState = 0;
+			if(Number(hasData) == 0)
+			{
+				$("html").attr('id','kong-page');
+				$(".kong-page").show();
+			}
+		},'json');
+	}
+	function loadClassmember() {
+        $(".loading").show();
+        dataNone = 1;
+        $.post(dataUrl,{class_id:dataCid,start:start,keyword:param},function (result) {
+            if (!$.isEmptyObject(result.data.member_list)){
+                var str='';
+                var num=0;
+                var role_list=[];
+                var list=result.data.member_list;
+                role_list['creator']='创建者';
+                role_list['admin']='管理员';
+                role_list['normal']='成员';
+
+                for (var i in list) {
+                    num++;
+                    if ($.inArray(list[i].user_id, loadId) != -1) continue;//去重
+                    loadId.push(list[i].user_id);
+                    hasData++;
+                    str += '<div class="admin-wrap">' +
+                        '            <div class="lesson-lay user-head fl">' +
+                        '                <span class="head-image fl"><img src="' + list[i].avatar + '"></span>' +
+                        '                <div class="lesson-r-box">' +
+                        '                    <h6 class="tit tit2">' + list[i].nickname + '</h6>' +
+                        '                    <span class="fz-16 fz-color-gray3 mb-ellipsis">' + role_list[list[i].role] + ' | '+ list[i].user_group_string+'</span>' +
+                        '                </div>' +
+                        '               <a onclick="popshow(this)" href="javascript:void(0)" data-id="' + list[i].user_id + '" data-role="' + list[i].role + '" ' +
+                        'data-name="' + list[i].nickname + '" data-member-id="'+list[i].member_id+'" data-user-id="'+list[i].user_id+'" title="操作" class="user-bj-ico">';
+                    if (showicon==1){
+                        str+='<i class="zs-ico-setup"></i>';
+                    }
+                    str+='</a></div></div>';
+                }
+                $(".loading").before(str);
+                start = Number(start) + Number(num);
+                dataNone = 1;
+            }else{
+                dataNone = 1;
+            }
+            $(".loading").hide();
+            loadState = 0;
+        },'json');
+    }
+
+	function loadCourseMember()
+	{
+		$(".loading").show();
+		dataNone = 1;
+        $.post(dataUrl,{class_id:dataCid,start:start,itemid:itemId,itemtype:itemType},function (result) {
+            result = result.data.list;
+            if (!$.isEmptyObject(result)){
+                var str='';
+                var num=0;
+
+                for (var i in result) {
+                    num++;
+		    str += '<div class="message-lay3">'+
+                '<a href="/class/userReport?class_id='+dataCid+'&member_id='+result[i].member_id+'" class="admin-wrap">'+
+                 '   <div class="lesson-lay">'+
+                 '       <span class="head-image fl"><img src="'+result[i].user_avatar+'"></span>'+
+                  '      <div class="lesson-r-box">'+
+                   '         <h6 class="tit tit2">'+result[i].member_nickname+'</h6>'+
+                    '        <div class="bottom fz-16">'+
+                     '           <span class="text '+result[i].color+'">'+result[i].learn_radio+'% </span>' +
+                                '<span  class="text">'+result[i].user_group_string+'</span>'+
+                      '      </div>'+
+                      '  </div>'+
+                    '</div>'+
+                '</a>'+
+            '</div>';
+                }
+                $("#loadMember").before(str);
+                start = Number(start) + Number(num);
+                dataNone = 0;
+            }else{
+                dataNone = 1;
+            }
+            $(".loading").hide();
+            loadState = 0;
+        },'json');
+	}
+
+	function loadUserOrder()
+	{
+		$(".loading").show();
+		dataNone = 1;
+        $.post(dataUrl,{start:start},function (result) {
+            if (!$.isEmptyObject(result) && !$.isEmptyObject(result.data)){
+                var str='';
+                var num=0;
+
+		var data = result.data;
+		console.log(data);
+                for (var i in data) {
+                    num++;
+
+		    var tips = '';
+		    if(data[i].gift == 1)
+		    {
+			tips = '<div class="class-tips">'+
+                                '<span class="act-icon">'+data[i].info1+'</span>'+
+                            '</div>';
+                    }else if(data[i].days > 0)
+		    {
+			tips = '<div class="class-tips">'+
+                                '<span class="act-icon">'+data[i].info1+'</span>'+
+                            '</div>';
+                    }else if(data[i].group_booking > 0)
+		    {
+			tips = '<div class="class-tips">'+
+                                '<span class="act-icon">'+data[i].info1+'</span>'+
+                            '</div>';
+		    }
+
+		    var state = '';
+		    var s_group = '';
+		    if(data[i].state == 'refund')
+		    {
+                        state = '<h1 class="status ft-cancel">已退款</h1>';
+		    }
+                    else if(data[i].group_booking > 0 && data[i].group_booking_state == 0)
+		    {
+			state = '<h1 class="status"><span class="ft-pintuan">拼团中</span></h1>';
+			s_group = ' <div class="order-bottom">'+
+                    			'<a class="order-btn-status linkPintuan" href="'+data[i].group_url+'">查看拼团</a>'+
+                		  '</div>';
+                    }else
+		    {
+			state = '<h1 class="status"><span class="ft-end">已完成</span></h1>';
+		    }
+
+		    str += ' <div class="orderItem shade-bx" data-url="'+data[i].order_url+'">'+
+                '<div class="order-top">'+
+                    '<div class="info fr fz-14">'+
+                            '<p>订单号：'+data[i].order_number+'</p>'+
+                            '<p>'+data[i].pay_time+'</p>'+
+                    '</div>'+
+                    state+
+                '</div>'+
+                '<div class="order-body">'+
+                    '<div class="content-item">'+
+                        '<div class="order-body-l fl">'+
+                            '<img src="'+data[i].img2+'" alt="商品图">'+
+                        '</div>'+
+                        '<div class="order-body-r">'+
+                            '<h2 class="title fz-18">'+HTMLEnCode(data[i].course_title)+'</h2>'+
+                            tips+
+                            '<span class="ori-price fz-16">￥'+data[i].unit_amount+'</span>'+
+                            '<span class="number fz-16">x '+data[i].number+'</span>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="order-total">'+
+                    '<p class="total fz-16 fr">'+
+                        '<span>共'+data[i].number+'件商品</span>&emsp;'+
+                        '<span>实付金额 '+data[i].real_amount+' 元</span>'+
+                    '</p> '+
+                '</div>'+
+		s_group +
+                '<div class="order-bottom">'+
+                '</div>'+
+            '</div>';
+                }
+                $(".loading").before(str);
+                start = Number(start) + Number(num);
+                dataNone = 0;
+            }else{
+                dataNone = 1;
+            }
+            $(".loading").hide();
+            loadState = 0;
+        },'json');
+	}
+
+	function loadCourseOrder(){
+        $(".loading").show();
+        dataNone = 1;
+        $.post(dataUrl,{start:start},function (result) {
+            var data=result.data;
+            if (!$.isEmptyObject(data)){
+                $('#h_title').removeClass('hid');
+                var num=0;
+                var html = '';
+                for (var i in data) {
+                    num++;
+
+                    html += ' <div class="orderItem shade-bx">' +
+                        '<div class="order-top clic" style="border-bottom:none" onclick="toggleShow(this)" style="border-bottom:none">' +
+                        '<div class="order-top-l fl">' +
+                        '<img class="user-icon" src="' + data[i].user_avatar + '" alt="">' +
+                        '</div>' +
+                        '<div class="order-top-r">' +
+                        '<h6 class="user-name fz-18">' + data[i].user_name_show + '</h6>' +
+                        '<p class="desc fz-16">销售收入：￥' + data[i].order_earn + '</p>' +
+                        '</div>' +
+                        '<div class="op-show toggleShow">' +
+                        '<i class="arrow-lg down"></i>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="order-total fz-14 hid" style="margin-top: 0.6rem;margin-top: 12px\9;border-top: 1px solid #f1f1f1;">' +
+                        '<p class="text"><span>订单支付时间：</span><span class="fr">' + data[i].order_paytime + '</span></p>' +
+                        '<p class="text"><span>订单商品数量：</span><span class="fr">x ' + data[i].order_event_amount + '</span></p>' +
+                        '<p class="text"><span>用户支付方式：</span><span class="fr">' + data[i].amount_type + '</span></p>' +
+                        '<p class="text"><span>订单合计金额：</span><span class="fr">￥' + data[i].order_amount + '</span></p>' +
+                        '<p class="text"><span>支付手续费用：</span><span class="fr">';
+                    if (data[i].order_service_charge>0){
+                        html+= '-￥' + data[i].order_service_charge ;
+                    }else{
+                        html+='￥0.00';
+                    }
+                    html+='</span></p><p class="text"><span>分销成本支出：</span><span class="fr">';
+                    if (data[i].order_distribution_amount>0){
+                        html+= '-￥' + data[i].order_distribution_amount ;
+                    }else{
+                        html+='￥0.00';
+                    }
+                    html+='</span></p></div></div>';
+                }
+
+                $(".loading").before(html);
+                start = Number(start) + Number(num);
+                dataNone = 0;
+            }else{
+                dataNone = 1;
+            }
+            $(".loading").hide();
+            loadState = 0;
+        },'json');
+    }
+
+	// 处理活动图标html
+    function getActiveHtml(actives){
+        var activeHtml = '<div class="act-icon-box mt-10 act-icon-normal showIcon">';
+        activeHtml += '<div class="act-icon-wrap ">';
+
+        $.each(actives, function(key, item){
+            activeHtml += '<span class="act-icon" style="background-color: '+item.bg_color+'; color: '+item.word_color+'; border-color: '+item.bd_color+'"> '+item.active_name+' </span> ';
+        });
+        activeHtml += '</div>';
+        if(actives.length > 2){
+            activeHtml += '<span class="arrow "></span>';
+        }
+        activeHtml += '</div>';
+        return actives.length > 0 ? activeHtml : '';
+    }
+
+</script>
+    <div style="background-color:#fff;" data-type="column" data-cid="10" id="comment_main" class="ke-main comment_main main_div hid">
+      	  <div class="pop-load fz-16 loading" style="overflow: hidden">
+         <span><img src="https://img.mbalib.com/ketang/images/load.gif"></span>
+	 <span id="loading">正在加载...</span>
+    </div>
+   </div>
+
+    <div class="ke-main main_div hid" id="nocomment">
+		         <div class="zs-main kong-page">
+             <span class="pic pic-7"></span>
+             <p class="fz-20 fz-color-gray">暂无数据</p>
+        </div>
+    </div>
+
+       <!-- 文稿 -->
+<div>
+    <div class="ke-main no-copy hid" style="background:#fff;text-align: justify;" id="draft_div" oncontextmenu="window.event.returnValue=false"
+onkeypress="window.event.returnValue=false"
+onkeydown="window.event.returnValue=false"
+onkeyup="window.event.returnValue=false"
+ondragstart="window.event.returnValue=false"
+onselectstart="event.returnValue=false">
+     <div class="wg-pop-lay">
+          <h1 id="draft_title"></h1>
+	   <div id="draft_content">
+	  </div>
+     </div>
+
+     </div>
+     <div class="wg-pop-bottom hid" id="draft_close_div" style="z-index:999">
+         <a href="javascript:void(0)" class="close" id="draft_close"></a>
+     </div>
+</div>
+    <!-- 文稿end -->
+
+
+    </div>
+</div>
+  </div>
+</div>
+
+<!--评论输入-->
+<div class="pop-wrap shadow1 hid" id="comment_pop">
+   <div class="pop-box">
+     <div class="head">
+         <a href="javascript:void(0)" class="fl f-color-g fz-18" id="comment_cancel">取消</a>
+         <a href="javascript:void(0)" class="fr f-color-b fz-18" id="comment_sub">发布</a>
+     </div>
+     <div class="commont-input-wrap">
+        <div class="commont-input-box">
+           <textarea placeholder="请输入要评论的内容" class="commont-input fz-18" id="comment"></textarea>
+        </div>
+    </div>
+
+   </div>
+</div>
+
+<!--评论回复-->
+<div class="pop-wrap shadow1 hid" id="comment_reply_pop">
+   <div class="pop-box">
+     <div class="head">
+         <a href="javascript:void(0)" class="fl f-color-g fz-18" id="comment_reply_cancel">取消</a>
+         <a href="javascript:void(0)" class="fr f-color-b fz-18" id="comment_reply_sub">回复</a>
+     </div>
+     <div class="commont-input-wrap">
+        <div class="commont-input-box">
+           <textarea placeholder="请输入要回复的内容" class="commont-input fz-18" id="comment_reply"></textarea>
+        </div>
+    </div>
+
+   </div>
+</div>
+
+ <!--评论-->
+<div class="footbar shadow1 footless-bar comment-footbar hid">
+     <div class="commont-input-wrap">
+        <div class="commont-input-box">
+           <input type="text" placeholder="点击开始交流..." class="commont-input fz-18">
+        </div>
+    </div>
+</div>
+
+ <!--报名-->
+
+
+<a href="javascript:void(0)" class="wg-ico fz-18 right_ico hid" id="showDraft">文稿</a>
+
+<script>
+
+(function(){
+
+	var signup_url = "/vipsignup/signup";
+	var vip_item_id = "10";
+	var vip_item_type = "column";
+	var user = "616614";
+	var vip_page_from = "play";
+	var vip_loginurl = "https://passport.mbalib.com/login?service=ketang&continue=https%3A%2F%2Fke.mbalib.com%2Fcolumn%2Fplay%3Fid%3D10";
+
+
+	$("#signup_vip").click(function(){
+			if (user == '')
+			{
+				location.href = vip_loginurl;
+				return false;
+			}
+		$.post(signup_url,{item_type:vip_item_type,item_id:vip_item_id},function(result){
+			if(result.state == 'success')
+			{
+				if(vip_page_from == 'play')
+				{
+					location.href = "/column/play?id="+vip_item_id;
+				}else
+				{
+					location.href="/"+vip_item_type+"/"+vip_item_id+"?justsign=1";
+				}
+			}else
+			{
+				if(result.errorno == 200001)
+				{
+					location.href = "/vip";
+				}else
+				{
+					showNo(result.error);
+				}
+			}
+		},'json');
+	});
+})()
+
+</script>
+<script>
+	var course_id = "10";
+
+(function(){
+
+	var loadComment = 0;
+	var loadTask = 0;
+	var hideCommentUrl = "/course/ajaxhidecomment";
+	var likeUrl = "/course/ajaxlike";
+	var addCommentUrl = "/course/ajaxaddcomment";
+	var replyCommentUrl = "/course/ajaxreplycomment";
+	var getTaskUrl = "/api/gettaskdetailv2";
+	var signupUrl = "/column?id=10";
+	var infoUrl = "https://ke.mbalib.com/column/10";
+	var sh = "";
+	var signup = "362486";
+
+    $("#signup").click(function () {
+        var url = document.referrer;
+        var domain = url.split('/');
+        if( domain[2] ) {
+            domain = domain[2];
+        }
+        domain === document.domain1 ?
+            window.history.go(-1):
+            window.location.href = signupUrl;
+    });
+
+	$(".a-tab").click(function(){
+		var type = $(this).attr('data-type');
+		$(".a-tab").removeClass("a-tabsel");
+		$(this).addClass("a-tabsel");
+		if(type == 'comment')
+		{
+			$(".main_div").addClass('hid');
+			if($(".comment_main").attr('data-nodata') == 1)
+			{
+				$("#nocomment").removeClass('hid');
+			}else
+			{
+				$(".comment_main").removeClass('hid');
+			}
+			if(signup)
+			{
+				$(".comment-footbar").removeClass('hid');
+				$(".comment_main").css('bottom','3.5rem');
+			}
+			if(loadComment == 0)
+			{
+				loadData();
+				loadComment = 1;
+			}
+		}else if(type == 'course')
+		{
+			$(".footbar").addClass('hid');
+			$(".main_div").addClass('hid');
+			$(".course_main").removeClass('hid');
+		}else if(type == 'task')
+		{
+			$(".footbar").addClass('hid');
+			$(".main_div").addClass('hid');
+			$(".task_main").removeClass('hid');
+		}else if(type == 'info')
+		{
+			var patt = /(\/certificate\/apply|studyplan)/i;
+			if (document.referrer === '' || document.referrer == window.location.href ||  document.referrer.search(patt) > 0) {
+				location.href = infoUrl;
+			}else
+			{
+				history.go(-1);
+			}
+		}
+	});
+
+
+$(".comment-footbar").click(function(){
+		$("#comment_pop").removeClass('hid');
+		bgShow();
+		$("#comment").focus();
+		});
+
+$("#comment_cancel").click(function(){
+	$("#comment_pop").addClass('hid');
+	bgHide();
+});
+
+//评论
+var isComment = 0;
+$("#comment_sub").click(function(){
+	if(isComment == 1) return false;
+	isComment = 1;
+	var comment = $("#comment").val();
+	comment = $.trim(comment);
+	var id = $(".material.less-list2sel").attr('data-course_id');
+	if(comment.length>0)
+	{
+		if(comment.length>1000)
+		{
+			showNotice("评论不能大于1000个字符");
+			isComment = 0;
+			return;
+		}
+		$.post(addCommentUrl,{id:id,comment:comment},function(result){
+				if(result.state == 'success')
+				{
+					showYes(result.info);
+					$("#comment").val("");
+					$("#comment_pop").addClass('hid');
+					bgHide();
+					resetLoad();
+					$(".less-comment-lay").remove();
+					loadData();
+				}else
+				{
+					showNotice(result.info);
+				}
+				isComment = 0;
+			},'json');
+	}else
+	{
+		isComment = 0;
+	}
+});
+
+
+		$(document).on("click",".hide_comment",function(){
+			if(!confirm("确定屏蔽该评论吗?")){return false;}
+			var id = $(this).attr('data-id');
+			var _this = $(this);
+			$.post(hideCommentUrl,{id:id},function(result){
+				if(result.status != 'success')
+				{
+					showNo('操作失败');
+				}else
+				{
+					_this.parents('.lesson-lay').hide();
+				}
+			},'json');
+		});
+
+	$(document).on("click",".like_comment",function(){
+		var id = $(this).attr("data-id");
+		var _this = $(this);
+		$.post(likeUrl,{id:id,type:'comment'},function(result){
+			if(result.state == 'success')
+			{
+			var like = _this.find(".like_num").html();
+			like = Number(like) + 1;
+			_this.find(".like_num").html(like);
+			_this.addClass("zan-sel");
+			showYes("点赞成功");
+			}else
+			{
+			showNo(result.info);
+			}
+		},'json');
+		return false;
+	});
+
+	$(document).on("click",".reply_comment",function(){
+		var id = $(this).attr('data-id');
+		$("#comment_reply_sub").attr('data-id',id);
+		$("#comment_reply_pop").removeClass('hid');
+		bgShow();
+	});
+
+	$("#comment_reply_cancel").click(function(){
+			$("#comment_reply_pop").addClass('hid');
+			bgHide();
+	});
+
+	var isReply = 0;
+	$("#comment_reply_sub").click(function(){
+			if(isReply == 1) return false;
+			isReply = 1;
+			var comment = $("#comment_reply").val();
+			comment = $.trim(comment);
+			if(comment.length>0)
+			{
+
+			var id = $(this).attr('data-id');
+			$.post(replyCommentUrl,{id:id,comment:comment},function(result){
+				if(result.status == 'success')
+				{
+				$("#comment_reply").val("");
+				$("#comment_reply_pop").addClass('hid');
+				$(".reply-lay[data-id='"+id+"']").removeClass('hid');
+				$(".reply-lay[data-id='"+id+"'] p").html(comment);
+				showYes("回复成功");
+				bgHide();
+				}else
+				{
+				showNotice(result.info);
+				}
+				isReply = 0;
+				},'json');
+			}else
+			{
+				isReply = 0;
+			}
+	});
+
+
+})()
+
+function closeAppTip(){
+	$("#box-app-bg").addClass("hidden");
+	$("#down-app-pop").fadeOut('fast');
+}
+
+function openAppTip(){
+	$("#box-app-bg").removeClass("hidden");
+	$("#down-app-pop").fadeIn('fast');
+}
+
+var appUrl = getServer('passport')+"/appopen/url";
+// var key = course_id +'_'+mid;
+var key = course_id;
+var pathname =location.pathname.split('/');
+var course_type = pathname[1];
+// console.log(appUrl,key);
+function downAppLink(){
+	var url ='https://www.mbalib.com/apps/mbalib/?from_source=ke_play';
+	if(wfIsPC()){
+		window.open(url,'_blank')
+	}else{
+		if(navigator.userAgent.match(/(iPhone|iPod|iPad|android);?/i)) {
+			$.ajaxSettings.async = false;
+			$.post(appUrl, {type: "ke_"+course_type, key:key,btn_type:'play'}, function (result) {
+				try {
+					if (result.url) {
+						location.href = result.url;
+						//安卓微信外，超时处理
+						if(navigator.userAgent.match(/(android|Adr);?/i) &&
+								navigator.userAgent.toLowerCase().indexOf("micromessenger") < 0){
+							setTimeout(function(){
+								window.location=url;//如果超时就跳转到app下载页
+							},1000);
+						}
+					}
+				} catch(e) {
+				}
+			}, 'json')
+			$.ajaxSettings.async = true;
+			return;
+		}
+	}
+}
+
+
+</script>
+
+<!-- 弹层 -->
+<div class="fx-pop5 plan_pop hid" id="plan_pop1" style="z-index:1005">
+    <div class="body">
+        <p class="msg fz-20">
+            学习计划安排已执行完成
+        </p>
+    </div>
+    <div class="bottom2">
+        <a  href="javascript:void(0)" class="yes-btn next_plan" data-mid="" data-type="" data-item-id="" data-item-type="">执行下个安排</a>
+        <a  href="javascript:void(0)" class="no-btn continue_class" data-task="查看作业" data-course="继续听课">继续听课</a>
+    </div>
+</div>
+
+<div class="fx-pop5 plan_pop hid" id="plan_pop3" style="z-index:1005">
+    <div class="body">
+        <p class="msg fz-20">
+            学习计划安排未执行完成
+        </p>
+    </div>
+    <div class="bottom2">
+        <a  href="javascript:void(0)" data-url="/studyplan" class="yes-btn next_plan" data-mid="" data-type="" data-item-id="" data-item-type="">执行下个安排</a>
+        <a  href="javascript:void(0)" class="no-btn" id="agree_plan" data-mid="" data-type="" data-item-id="" data-item-type="">重新听课</a>
+    </div>
+</div>
+
+<div class="fx-pop5 plan_pop hid" id="plan_pop2" style="z-index:1005">
+    <div class="body">
+        <p class="msg fz-20">
+            学习计划今日安排已执行完成
+        </p>
+    </div>
+    <div class="bottom2">
+        <a  href="/studyplan" class="yes-btn">返回</a>
+        <a  href="javascript:void(0)"  class="no-btn continue_class" data-task="查看作业" data-course="继续听课">继续听课</a>
+    </div>
+</div>
+
+<script>
+
+
+
+var plan_arr = wfGetCookie('loadPlan');
+var curr_plan_arr = '';
+var materials = new Array();
+var ddate = wfGetQueryString('date');
+if($(".material"))
+{
+	$(".material").each(function(){
+			materials.push($(this).attr("data-id"));
+			});
+}
+if(plan_arr)
+{
+	plan_arr = JSON.parse(plan_arr);
+}
+
+$(".next_plan,#agree_plan").click(function(){
+	var type = $(this).attr('data-type');
+	var mid = $(this).attr('data-mid');
+	var item_type = $(this).attr('data-item-type');
+	var item_id = $(this).attr('data-item-id');
+	if(type == 'material')
+	{
+		var result = $.inArray(mid, materials);
+		if(result != -1)//在同个课程 播放下一个章节
+		{
+			getPlan(mid,'material');
+			popCancel();
+			materialStateShow2($(".material[data-id='"+mid+"']"));
+			planComplete(mid,'material',getMaterial,'start');
+		}else
+		{
+			location.href = '/'+item_type+'/play?id='+item_id+'&mid='+mid+'&loadPlan=1&date='+ddate;
+		}
+	}else if(type == 'task')
+	{
+		location.href = '/task/'+mid+'?loadPlan=1&date='+ddate;
+	}
+});
+
+function materialStateShow2(materialDiv)
+{
+	$(".less-list2sel").addClass('less-list3');
+	$(".material").removeClass('less-list2sel');
+	materialDiv.addClass("less-list2sel");
+	materialDiv.removeClass('less-list3');
+}
+
+var next_plan = '';
+function showPopById(id){
+	bgShow();
+	$("#"+id).removeClass("hid");
+}
+function popCancel(){
+	$(".plan_pop").addClass("hid");
+	bgHide();
+}
+
+//学习计划章节是否完成
+function planComplete(m_id,m_type,callback,state)
+{
+	var planUrl = '/studyplan/completematerial';
+	$.post(planUrl,{plan_item_type:m_type,plan_item_id:m_id,date:ddate,plan_id:curr_plan_arr.plan_id},function(result){
+			if(result.data.is_finish == 1)
+			{
+				next_plan_ac(state);
+				$(".plan_pop .continue_class").click(function(){
+					wfDeleteCookie('loadPlan',document.domain);
+					popCancel();
+					if(typeof callback === 'function')
+					{
+						callback();
+					}
+				});
+
+				/*$("#plan_pop2 .continue_class").click(function(){
+					popCancel();
+				});*/
+			}else
+			{
+				if(state == 'end')
+				{
+					again_plan_ac();
+				}else
+				{
+					if(typeof callback === 'function')
+					{
+						callback();
+					}
+				}
+			}
+	},'json');
+}
+
+function again_plan_ac()
+{
+	if(next_plan)
+	{
+		$(".next_plan").attr('data-item-id',next_plan.item_id);
+		$(".next_plan").attr('data-item-type',next_plan.item_type);
+		$(".next_plan").attr('data-mid',next_plan.mid);
+		$(".next_plan").attr('data-type',next_plan.type);
+	}else
+	{
+		$("#plan_pop3 .next_plan").html('返回');
+		var url = $("#plan_pop3 .next_plan").attr('data-url');
+		$("#plan_pop3 .next_plan").attr('href',url);
+	}
+	$("#plan_pop3").removeClass('hid');
+	bgShow();
+}
+
+function next_plan_ac(state)
+{
+	plan_arr = plan_arr.slice(1);
+	if(curr_plan_arr.type == 'material')
+	{
+		//$("#plan_pop3 .no-btn").html('继续听课');
+		$("#plan_pop1 .no-btn").html('继续听课');
+	}else
+	{
+		$(".plan_pop .no-btn").html('查看作业');
+	}
+	if(next_plan)
+	{
+		wfSetCookie('loadPlan', JSON.stringify(plan_arr), 3600, document.domain);
+		$(".next_plan").attr('data-item-id',next_plan.item_id);
+		$(".next_plan").attr('data-item-type',next_plan.item_type);
+		$(".next_plan").attr('data-mid',next_plan.mid);
+		$(".next_plan").attr('data-type',next_plan.type);
+		if(curr_plan_arr.type == 'material' && next_plan.type == 'material')
+		{
+			var result = $.inArray(next_plan.mid, materials);
+			if(result != -1 && state == 'end')//在同个课程 播放下一个章节
+			{
+				getPlan(next_plan.mid,'material');
+				materialStateShow2($(".material[data-id='"+next_plan.mid+"']"));
+				planComplete(next_plan.mid,'material',getMaterial,'start');
+				//location.href = '/'+next_plan.item_type+'/play?id='+next_plan.item_id+'&mid='+next_plan.mid+'&loadPlan=1&date='+ddate;
+			}else
+			{
+				$("#plan_pop1").removeClass('hid');
+				bgShow();
+			}
+		}else
+		{
+			$("#plan_pop1").removeClass('hid');
+			bgShow();
+		}
+	}else
+	{
+		$("#plan_pop2").removeClass('hid');
+		bgShow();
+	}
+}
+
+//是否有计划节点
+function getPlan(m_id,m_type)
+{
+	if(!plan_arr) return false;
+	for(var i in plan_arr)
+	{
+		if(plan_arr[i].type == m_type && plan_arr[i].mid==m_id)
+		{
+			curr_plan_arr = plan_arr[i];
+			var next = Number(i) + 1;
+			if(plan_arr[next])
+			{
+				next_plan = plan_arr[next];
+			}else
+			{
+				next_plan = '';
+			}
+			$("#agree_plan").attr('data-item-id',curr_plan_arr.item_id);
+			$("#agree_plan").attr('data-item-type',curr_plan_arr.item_type);
+			$("#agree_plan").attr('data-mid',curr_plan_arr.mid);
+			$("#agree_plan").attr('data-type',curr_plan_arr.type);
+			return true;
+		}
+	}
+
+	return false;
+}
+
+</script>
+<script type="text/javascript" src="https://img.mbalib.com/common/jquery/jquery.ui.js"></script>
+<!--<link rel="stylesheet" href="https://img.mbalib.com/common/qplayer/qplayer_v720.css">-->
+<link rel="stylesheet" href="https://img.mbalib.com/common/qplayer/qplayer_v612.css">
+<link rel="stylesheet" href="https://img.mbalib.com/common/qplayer/qvplayer.css">
+<script src="https://img.mbalib.com/common/qplayer/qplayer_v1201.js?v=1120"></script>
+<script src="https://img.mbalib.com/common/qplayer/qvplayer_v612.js?v=311"></script>
+<script src="https://img.mbalib.com/common/md5.js"></script>
+<script>
+
+var getMaterial;
+(function(){
+
+var draftUrl = "/course/ajaxdraft";
+var id = "10";
+var listenUrl = "/course/ajaxlisten";
+var courseListenUrl2 = "/api/materiallisten";
+var courseListenUrl3 = "/api/materiallistenv2";
+var isListenArr = new Array()
+var signuptype = "column";
+var signupid = "10";
+var autoPlay = true;
+var section = "";
+var isjump = 0;
+var courseislisten = 1;
+var mid = "";//指定播放的目录
+var audition = "";
+var currentPlayer = '';
+var period = "";
+var realsignup = "";
+var cid = "";
+var ctype = "column";
+var audition_div_show = 0;
+var latestListen = "";
+var signup_id = "362486";
+var updateListen = 0;
+var updateListenUrl2 = "/api/courselisten";
+var playTimesUrl = "/api/recordplaytimes";
+var current_course = '';
+var first_load = 1;
+var material_div_top = 0;
+if(!wfIsPc())
+	loadfile("https://img.mbalib.com/common/qplayer/landscape_v612.css","css");
+
+//导入横屏样式
+
+function setDivTop()
+		{
+			if(material_div_top == 1) return false;
+			material_div_top = 1;
+			//设置课程列表高度
+			var c_top = $(".qplayer-play-box").offset().top;
+			var c_height = $(".qplayer-play-box").height();
+			var c_height2 = $(".tabnav3").height();
+			var s_top = c_top + c_height;
+			s_top = s_top + 'px';
+			$(".ke-main").css("top",s_top);
+			$("#draft_div").css("top",c_height - c_height2 + c_top);//顶部导航距离c_top
+		}
+
+$(function(){
+
+
+		if(mid)
+		{
+			if($(".material[data-id='"+mid+"']").length <= 0)
+			{
+				materialStateShow($(".material:eq(0)"));
+				getMaterial();
+			}else
+			{
+				materialStateShow($(".material[data-id='"+mid+"']"));
+				var loadPlan = wfGetQueryString('loadPlan');
+				var isPlan = 0;//是否是计划安排
+				if(loadPlan == 1 && getPlan(mid,'material'))
+				{
+					isPlan = 1;
+				}
+				if(isPlan == 1)
+				{
+					planComplete(mid,'material',getMaterial,'start');
+				}else
+				{
+					getMaterial();
+				}
+			}
+
+		}else
+		{
+			materialStateShow($(".material:eq(0)"));
+			var lastTime = qPlayer.getCookie("audio_ctime-"+id);
+			if(lastTime)
+			{
+				var lastTimeArr = lastTime.split("-");
+				if(lastTimeArr[3] == 1)//已经结束
+				{
+					var next = $(".material[data-sort='"+lastTimeArr[0]+"']").next();
+					if(next && next.hasClass("material"))
+					{
+						materialStateShow(next);
+					}else
+					{
+						materialStateShow($(".material:eq(0)"));
+					}
+					getMaterial();
+				}else
+				{
+					if(lastTimeArr[0] > 0 || lastTimeArr[2] >= 10 || lastTimeArr[0] > 1)//跳转到上次播放位置
+					{
+						jumpLastTime();
+					}else
+					{
+						getMaterial();
+					}
+				}
+			}else
+			{
+				getMaterial();
+			}
+		}
+
+			function changeSidePosition()
+			{
+				var q_width = $(".qplayer-play-box").width();
+				var q_left = parseInt($(".qplayer-play-box").offset().left);
+				if(q_left > 100)
+				{
+					var side_right = q_left + q_width + 5;
+					$(".right_ico").css("left",side_right+"px");
+					$(".right_ico").css("right","initial");
+				}
+			}
+			changeSidePosition();
+
+			$(window).resize(function(){
+					changeSidePosition();
+					});
+
+
+
+
+		//重新开始播放
+		$("#jumpStartTime").click(jumpStartTime);
+
+		//上此播放位置开始播放
+		$("#jumpLastTime").click(jumpLastTime);
+
+		$(".material").click(function(){
+			materialStateShow($(this));
+			getMaterial();
+		});
+
+		//重新开始播放
+		function jumpStartTime()
+		{
+			$("#lastTime").hide();
+			bgHide();
+			$(".play-ico").click();
+		}
+		//上此播放位置开始播放
+		function jumpLastTime()
+		{
+			var lastTimeArr = lastTime.split("-");
+			$("#lastTime").hide();
+			bgHide();
+			if(lastTimeArr[1])
+			{
+				var index = lastTimeArr[1] - 1;
+				if($(".material[data-id='"+lastTimeArr[1]+"']").length <= 0)
+				{
+					materialStateShow($(".material:eq(0)"));
+					getMaterial();
+					return;
+				}
+				materialStateShow($(".material[data-id='"+lastTimeArr[1]+"']"));
+				getMaterial();
+				//载入元数据后调整到上次播放位置
+				currentPlayer.loadedmetadata(function(){
+						if(isjump == 0)
+						{
+						currentPlayer.jumpTime(lastTimeArr[2]);
+						isjump = 1;
+						}
+						});
+			}
+		}
+
+})
+
+function materialStateShow(materialDiv)
+{
+	$(".less-list2sel").addClass('less-list3');
+	$(".material").removeClass('less-list2sel');
+	materialDiv.addClass("less-list2sel");
+	materialDiv.removeClass('less-list3');
+}
+
+
+
+function logListen()
+{
+	var material = $(".material.less-list2sel");
+	var listen = material.attr("data-islisten");
+	var course_id = material.attr('data-course_id');
+	var mid = material.attr("data-id");
+
+
+
+	if($.inArray(course_id, isListenArr) == -1)
+	{
+		isListenArr.push(course_id);
+		$.post(updateListenUrl2,{id:course_id},function(result){
+		});
+	}
+
+	$.post(courseListenUrl2,{id:mid,cid:course_id,is_listen:listen},function(result){
+	});
+
+	if(listen == 1) return;
+	material.attr("data-islisten",1);
+	return;
+}
+
+function playstart()
+{
+	if($(".material.less-list2sel .less-ico").hasClass('less-ico3'))
+	{
+		$(".material.less-list2sel .less-ico").removeClass('less-ico3');
+	}
+	$(".material.less-list2sel .front_note1").removeClass('hid');
+	$(".material.less-list2sel .front_note2").addClass('hid');
+}
+
+function playpause()
+{
+	if($(".material.less-list2sel .less-ico").hasClass('less-ico2'))
+	{
+		$(".material.less-list2sel .less-ico").addClass('less-ico3');
+	}else if($(".material.less-list2sel .less-ico").hasClass('less-ico5'))
+	{
+		$(".material.less-list2sel .less-ico").addClass('less-ico3');
+	}
+}
+
+function playLog(lCtype,lCid,lMid,playTime)
+{
+	var sign = hex_md5(lMid+playTime+'material.less-list2sel');
+
+	var learntime = $(".material[data-id='"+lMid+"']").attr('data-learntime');
+	learntime = Number(learntime) + Number(playTime);
+	$(".material[data-id='"+lMid+"']").attr('data-learntime',learntime);
+	learntime = Number(learntime) * 100;
+	var time = $(".material[data-id='"+lMid+"']").attr('data-time');
+	var radio = parseInt(learntime/time);
+	if(radio > 100) radio = 100;
+	if(radio == 100)
+	{
+		if($(".material[data-id='"+lMid+"'] .less-ico").hasClass('less-ico1'))
+		{
+			$(".material[data-id='"+lMid+"'] .less-ico").addClass('less-ico4');
+		}else if($(".material[data-id='"+lMid+"'] .less-ico").hasClass('less-ico2'))
+		{
+			$(".material[data-id='"+lMid+"'] .less-ico").addClass('less-ico5');
+		}
+		$(".material[data-id='"+lMid+"'] .m_radio").html('已学完');
+	}else
+	{
+		$(".material[data-id='"+lMid+"'] .m_radio").html('已学'+radio+'%');
+	}
+
+	$.post(courseListenUrl3,{ctype:lCtype,cid:lCid,id:lMid,duration:playTime,sign:sign},function(result){
+	},'json');
+}
+
+function playend()
+{
+	var m_id = $(".material.less-list2sel").attr("data-id");
+	if(getPlan(m_id,'material'))
+	{
+		planComplete(m_id,'material',playendnext,'end');
+	}else
+	{
+		playendnext();
+	}
+}
+
+function playendnext()
+{
+	var i = $(".material.less-list2sel").attr('data-sort');
+	var next_i = Number(i) + 1;
+	var next = $(".material[data-sort='"+next_i+"']");
+	if(next && next.hasClass("material"))
+	{
+		materialStateShow(next);
+		getMaterial();
+	}else
+	{
+		if(audition == 1)
+		{
+			if(audition_div_show == 0 && $(".pop-operate:visible").length<=0)
+			{
+				bgShow();
+				$("#audition_div").show();
+				audition_div_show = 1;
+			}
+		}
+	}
+}
+
+
+
+function loadAudio()
+{
+}
+
+//记录已听过
+function courseListen(id)
+{
+	//记录播放次数
+	$.post(playTimesUrl,{id:id},function(result){
+		//console.log(result);
+	});
+
+	if(courseislisten == 1 && signupid)//通知
+	{
+		var writeListenlog = 0;//课程是否已经听过
+		$(".material").each(function(){
+			if($(this).attr("data-islisten"))
+			{
+				writeListenlog = 1;
+				return false;
+			}
+		});
+		courseislisten = 2;
+		$.post(courseListenUrl,{id:id,signuptype:signuptype,signupid:signupid,log:writeListenlog},function(result){
+				});
+	}
+}
+
+
+function changetime(material,time)
+{
+}
+
+function showCourse()
+{
+	var course_id = $(".material.less-list2sel").attr('data-course_id');
+	var draft = $(".material.less-list2sel").attr("data-draft");
+	if(draft == 1)
+	{
+		$("#showDraft").removeClass('hid');
+	}else
+	{
+		$("#showDraft").addClass('hid');
+	}
+
+}
+
+$("#showDraft").click(function(){
+	var draft_top = 0;
+	var course_id = $(".material.less-list2sel").attr('data-course_id');
+	if(current_course && current_course != course_id)
+	{
+		draft_top = 1;
+	}
+	current_course = course_id;
+	$.post(draftUrl,{id:course_id},function(result){
+		if(result.hasDraft == 1)
+		{
+			$("#showDraft").addClass('hid');
+			$("#draft_title").html(result.title);
+			$("#draft_content").html(result.draft);
+			$("#draft_div").removeClass('hid');
+			if(draft_top == 1)
+			{
+				$("#draft_div").scrollTop(0);
+			}
+			$("#draft_close_div").removeClass('hid');
+			$(".comment-footbar").addClass('hid');
+			$(".content").addClass('content5');
+			$(".content").removeClass('content4');
+		}
+	},'json')
+});
+
+$("#draft_close").click(function(){
+		$("#draft_div").addClass('hid');
+		if($(".a-tabsel").attr('data-type') == 'comment')
+		{
+			$(".comment-footbar").removeClass('hid');
+		}
+		$("#showDraft").removeClass('hid');
+		$("#draft_close_div").addClass('hid');
+		$(".content").addClass('content4');
+		$(".content").removeClass('content5');
+});
+
+//changetime(309,90);
+
+getMaterial = function()
+{
+	if(!netWordState())
+	{
+		showNo('网络不可用，请检查网络');
+	}
+	var m_url = $(".material.less-list2sel").attr("data-url");
+	var next_url = $(".material.less-list2sel").next(".material").attr("data-url");
+	if(!next_url) next_url = '';
+	if(section)
+	{
+		m_url = m_url + "?section=true";
+	}
+
+	showCourse();
+
+	var m_type = $(".material.less-list2sel").attr("data-type");
+	var m_time = $(".material.less-list2sel").attr("data-time");
+	var m_id = $(".material.less-list2sel").attr("data-id");
+	var m_sort = $(".material.less-list2sel").attr("data-sort");
+	var m_title = $(".material.less-list2sel").attr("data-title");
+	var m_ware = $(".material.less-list2sel").attr("data-ware");
+	var m_pic = $(".material.less-list2sel").attr("data-pic");
+	var m_pc_pic = $(".material.less-list2sel").attr("data-pc_pic");
+	var m_like = $(".material.less-list2sel .like_num").html();
+	var c_id = id;
+
+	if(first_load == 1)//第一次加载滚动条到对应的位置
+	{
+		first_load = 2;
+		var s_top = $(".material.less-list2sel").position().top;
+		$(".course_main").animate({ scrollTop: s_top }, 120);
+	}
+
+	if(!wfIsPc())
+	{
+		pic = m_pic;
+	}else
+	{
+		pic = m_pc_pic;
+	}
+
+
+	if(!m_url)
+	{
+		//无音频时计算弹层高度
+		/*var c_top = $(".qplayer-play-head").offset().top;
+		var c_height = $(".qplayer-play-head").height();
+		var s_top = c_top + c_height + 10;
+		var h_height = $(window).height() - s_top - $(".head-tit").outerHeight();
+		s_top = s_top + 'px';
+		$(".scrollwrapper-h").css("height",h_height);
+		$(".scrollwrapper").css("top",s_top);
+		$("#content_div").css("top",s_top);*/
+		return false;
+	}
+
+	logListen();
+
+
+	var main_bottom = '0';
+	if($("#nosign_footbar").is(':visible'))
+	{
+		main_bottom = '3.5rem';
+	}
+	if(m_type == 'video')
+	{
+		$(".ke-main").css("bottom",main_bottom);//设置离底部的距离，区别设置是因为音频底部有个播放条
+		if(qPlayer) qPlayer.pauseAudio();
+		$("#player_container2").html('');
+		$("#player_container2").show();
+		$("#player_container").hide();
+
+		qvPlayer.init($("#player_container2"),{
+			"src": m_url,
+			"playend":playend,//播放结束回调
+			"changetime":changetime,
+			"playstart":playstart,//播放回调
+			"playpause":playpause,//暂停回调
+			"loadAudio":loadAudio,//载入回调
+			"playLog":playLog,//播放时长日志回调
+			"play":autoPlay,//是否自动播放
+			"id":m_id,//材料ID
+			"sort":m_sort,//当前目录的顺序
+			"cid":c_id,//课程ID,
+			"ctype":ctype,//column,course
+			});
+		currentPlayer = qvPlayer;
+		var c_height = currentPlayer.container.height();
+		var c_height2 = c_height + 10;
+	}else
+	{
+		$(".ke-main").css("bottom",main_bottom);//设置离底部的距离，音频底部播放条已从原来的底部移动到上方
+		if(qvPlayer) qvPlayer.pauseAudio();
+
+		$("#player_container2").html('');
+		$("#player_container2").hide();
+		$("#player_container").show();
+
+	qPlayer.init($("#player_container"),{
+			"src":m_url,//音频地址
+			"next_src":next_url,//下一个播放音频用于预加载
+			"playend":playend,//播放结束回调
+			"changetime":changetime,
+			"playstart":playstart,//播放回调
+			"playpause":playpause,//暂停回调
+			"loadAudio":loadAudio,//载入回调
+			"playLog":playLog,//播放时长日志回调
+			"play":autoPlay,//是否自动播放
+			"id":m_id,//材料ID
+			"sort":m_sort,//当前目录的顺序
+			"ware":m_ware,//课件
+			'pic':pic,//图片
+			"cid":c_id,//课程ID,
+			"ctype":ctype,//column,course
+			//"time":m_time
+			});
+		currentPlayer = qPlayer;
+		var c_height = $(".qplayer-less-banner").height();
+		var c_height2 = currentPlayer.container.height() + 20;
+	}
+
+	var c_top = currentPlayer.container.offset().top;
+	var s_top = c_top + c_height;
+	var s_top2 = c_top + c_height2;
+	var h_height = $(window).height() - s_top - $(".head-tit").outerHeight();
+	$(".scrollwrapper-h").css("height",h_height);
+	$(".scrollwrapper").css("top",s_top);
+	$("#content_div").css("top",s_top2);
+
+	setDivTop();
+}
+
+
+
+
+//是否连播
+$(".switch-btn").click(function(){
+	if($(".switch-btn").hasClass("switch-on"))
+	{
+		$(".switch-btn").removeClass("switch-on");
+		$(".switch-btn").addClass("switch-off");
+	}else
+	{
+		$(".switch-btn").addClass("switch-on");
+		$(".switch-btn").removeClass("switch-off");
+	}
+});
+
+})();
+
+</script>
+
+	<script>
+var shareUrl = "https://ke.mbalib.com/column/10";
+var shareAvatar = "https://ke.mbalib.com/uploads/column/5/5d/5d1899a217b4d3c5d12e008019a424cc.png";
+var shareTitle = "八堂薪酬体系课教会你，如何做好薪酬管理「智库课堂」-优秀管理者的学习平台";
+var shareDesc = "报名即赠最新行业薪酬报告+2017年上半年全国薪酬报告+薪酬工具包,「智库课堂」有料•有深度•有时效-「MBA智库」旗下的在线轻课堂学习平台";
+//alert(shareAvatar);
+
+var shareSuccess;
+function shareSet(s_shareUrl,s_shareAvatar,s_shareTitle,s_shareDesc)
+{
+	if(s_shareUrl)
+	{
+		shareUrl = s_shareUrl;
+	}
+	if(!shareUrl)
+	{
+		shareUrl = window.location.href;
+	}
+	if(s_shareAvatar)
+	{
+		shareAvatar = s_shareAvatar;
+	}
+	if(s_shareTitle)
+	{
+		shareTitle = s_shareTitle;
+	}
+	if(s_shareDesc)
+	{
+		shareDesc = s_shareDesc;
+	}
+	console.log(shareDesc);
+}
+
+function wxShare()
+{
+	shareTitle = HTMLDeCode(shareTitle);
+	shareDesc = HTMLDeCode(shareDesc);
+	wx.onMenuShareAppMessage({
+    		title: shareTitle, // 分享标题
+		desc: shareDesc, // 分享描述
+		link: shareUrl, // 分享链接
+		imgUrl: shareAvatar, // 分享图标
+		type: '', // 分享类型,music、video或link，不填默认为link
+		dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+		success: shareSuccess,
+		cancel: function () {
+		}
+		});
+
+	wx.onMenuShareTimeline({
+    		title: shareTitle, // 分享标题
+		link: shareUrl, // 分享链接
+		imgUrl: shareAvatar, // 分享图标
+		success: shareSuccess,
+		cancel: function () {
+		}
+		});
+	wx.onMenuShareQQ({
+		title: shareTitle, // 分享标题
+		desc: shareDesc, // 分享描述
+		link: shareUrl, // 分享链接
+		imgUrl: shareAvatar, // 分享图标
+		success: shareSuccess,
+		cancel: function () {
+		}
+		});
+	wx.onMenuShareWeibo({
+		title: shareTitle, // 分享标题
+		desc: shareDesc, // 分享描述
+		link: shareUrl, // 分享链接
+		imgUrl: shareAvatar, // 分享图标
+		success: shareSuccess,
+    		cancel: function () {
+		}
+		});
+	wx.onMenuShareQZone({
+		title: shareTitle, // 分享标题
+    		desc: shareDesc, // 分享描述
+    		link: shareUrl, // 分享链接
+    		imgUrl: shareAvatar, // 分享图标
+    		success: shareSuccess,
+    		cancel: function () {
+		}
+		});
+}
+wx.ready(function(){
+		wxShare();
+	/*if(!typeof customShare === "function")
+	{
+		wxShare();
+	}*/
+});
+
+</script>
+<div id="bg"></div>
+<div class="pop-zan-wrap hid" style="z-index: 1010;">
+   <span id="show_notice"></span>
+</div>
+
+<div class="prompt-lay hid" id="show_yes_prompt">
+    <span class="prompt-ico prompt-1" ></span>
+    <span id="show_yes"></span>
+</div>
+
+<div class="prompt-lay hid" id="show_no_prompt">
+    <span class="prompt-ico prompt-2" ></span>
+    <span id="show_no"></span>
+</div>
+
+<script>
+
+function showNotice(text)
+{
+	$("#show_notice").html(text);
+	$(".pop-zan-wrap").show();
+	$(".pop-zan-wrap").fadeOut(3000);
+}
+
+function showNoticeP(text)
+{
+	$("#show_notice").html(text);
+	$(".pop-zan-wrap").show();
+	//$(".pop-zan-wrap").fadeOut(3000);
+}
+
+function showYes(text)
+{
+	$("#show_yes").html(text);
+	$("#show_yes_prompt").show();
+	$("#show_yes_prompt").fadeOut(3000);
+}
+
+function showNo(text)
+{
+	$("#show_no").html(text);
+	$("#show_no_prompt").show();
+	$("#show_no_prompt").fadeOut(3000);
+}
+
+</script>
+</body>
+</html>
